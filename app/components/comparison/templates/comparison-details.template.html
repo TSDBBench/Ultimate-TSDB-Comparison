@@ -1,0 +1,59 @@
+<div class="pheader">
+    <h2>{{getHeaderText()}}
+        <template ngFor let-sitem [ngForOf]="data?.getPropertyListItems(confServ.comparison?.details.headerLabel)"
+                  *ngIf="confServ.comparison">
+            <ptooltip [tooltip]="getHeaderColumn()?.values[sitem.content]"
+                      [tooltipHtml]="sitem.htmlChilds|citation:[citationServ]" [position]="'s'">
+                <div class="{{getHeaderLabel()?.getCls(sitem.content)}} mylabel">
+                    {{sitem.content}}
+                </div>
+            </ptooltip>
+        </template>
+        <small><a href="{{getHeaderUrl()}}" target="_blank">{{getHeaderUrl()}}</a></small>
+    </h2>
+</div>
+<div class="content" style="padding-left:15px; padding-right: 15px;">
+    <pcard *ngIf="confServ.comparison" heading="{{confServ.comparison?.details.bodyMainTitle}}" style="display:block;">
+        <div class="card-content">
+            <htmlcitationtext [description]="getBody()" [citationServ]="citationServ"
+                              *ngIf="citationServ.check"></htmlcitationtext>
+        </div>
+    </pcard>
+    <template ngFor let-atag [ngForOf]="confServ.getBodyAttachmentTags()" *ngIf="confServ.comparison">
+        <pcard heading="{{getTable(atag).name}}">
+            <p class="card-content">
+                <template ngFor let-sitem [ngForOf]="data?.getPropertyListItems(atag)">
+                    <ptooltip *ngIf="!confServ.comparison?.details.tooltipAsText" [tooltip]="getTable(atag)?.values[sitem.content]"
+                              [tooltipHtml]="sitem.htmlChilds|citation:[citationServ]" [position]="'n'">
+                        <span class="{{getTable(atag)?.type?.getCls(sitem.content)}} mylabel">{{sitem.content}}</span>
+                    </ptooltip>
+                    <div *ngIf="confServ.comparison?.details.tooltipAsText">
+                        <span class="{{getTable(atag)?.type?.getCls(sitem.content)}} mylabel">{{sitem.content}}</span>
+                        <span class="tooltip-text">
+                        <htmlcitationtext [description]="getTable(atag)?.values[sitem.content]"
+                                          [citationServ]="citationServ"
+                                          *ngIf="citationServ.check"></htmlcitationtext>
+                        <htmlcitationtext [description]="sitem.htmlChilds" [citationServ]="citationServ"
+                                          *ngIf="citationServ.check"></htmlcitationtext>
+                        </span>
+                    </div>
+                </template>
+            </p>
+        </pcard>
+    </template>
+
+    <pcard heading="Ratings" *ngIf="data?.getRatings().length > 0" style="display:block">
+        <div class="card-content">
+            <template ngFor let-item [ngForOf]="data?.getRatings()">
+                <dl>
+                    <dt>
+                        <iicon icon="star">{{item.stars}}</iicon>
+                    </dt>
+                    <dd>
+                        {{item.text}}
+                    </dd>
+                </dl>
+            </template>
+        </div>
+    </pcard>
+</div>

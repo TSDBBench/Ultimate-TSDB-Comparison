@@ -1,0 +1,26 @@
+:host /deep/ ng-select {
+    display: table !important;
+    table-layout: fixed !important;
+    width: 100% !important;
+}
+
+:host /deep/ input {
+    width: 100%;
+}
+
+:host /deep/ .below {
+    border: 0px !important;
+    border-bottom: 1px solid #aaa !important;
+    border-radius: 0px !important;
+}
+
+:host /deep/ .option {
+    background-color: #777 !important;
+    color: #fff !important;
+    font-weight: bold;
+    border-radius: 4px !important;
+}
+
+:host /deep/ .deselect-option {
+    color: #fff !important;
+}

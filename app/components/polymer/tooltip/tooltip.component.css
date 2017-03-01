@@ -1,0 +1,96 @@
+:host {
+    position: relative;
+    display: inline-block;
+}
+
+:host .ptooltiptext {
+    visibility: hidden;
+    min-width: 60px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    border-radius: 6px;
+
+    position: absolute;
+    z-index: 1;
+
+    white-space: nowrap;
+
+    transition-property: visibility;
+    transition-duration: 0.1s;
+}
+
+:host .ptooltiptext /deep/ ul, :host .ptooltiptext /deep/ ol {
+    text-align: left;
+    padding-left: 20px;
+}
+
+:host:hover .ptooltiptext {
+    visibility: visible;
+}
+
+:host .ptooltiptext::after {
+    content: " ";
+    position: absolute;
+    border-width: 5px;
+    border-style: solid;
+}
+
+/* north */
+:host.n .ptooltiptext {
+    bottom: 115%;
+    left: -25%;
+    margin-left: 1em;
+    margin-top: 0;
+}
+
+:host.n .ptooltiptext::after {
+    top: 100%;
+    left: 1em;
+    margin-left: -5px;
+    border-color: black transparent transparent transparent;
+}
+
+/* south */
+:host.s .ptooltiptext {
+    top: 115%;
+    left: -25%;
+    margin-left: 1em;
+}
+
+:host.s .ptooltiptext::after {
+    bottom: 100%;
+    left: 1em;
+    margin-left: -5px;
+    border-color: transparent transparent black transparent;
+}
+
+/* east */
+:host.e .ptooltiptext {
+    top: 0;
+    left: 100%;
+    margin-left: 5px;
+}
+
+:host.e .ptooltiptext::after {
+    top: 1em;
+    right: 100%; /* To the left of the tooltip */
+    margin-top: -5px;
+    border-color: transparent black transparent transparent;
+}
+
+/* west */
+:host.w .ptooltiptext {
+    top: 0;
+    right: 100%;
+    margin-right: 5px;
+}
+
+:host.w .ptooltiptext::after {
+    top: 1em;
+    left: 100%;
+    margin-top: -5px;
+    border-color: transparent transparent transparent black;
+}   
+

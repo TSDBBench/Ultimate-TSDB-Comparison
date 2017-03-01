@@ -1,0 +1,9 @@
+:host {
+    display: block;
+    position: relative;
+    padding: 0px 16px;
+}
+
+:host(.item-selected) {
+    font-weight: bold;
+}

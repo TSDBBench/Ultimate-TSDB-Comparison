@@ -1,0 +1,17 @@
+{
+  "title": "Ultimate-Comparison",
+  "subtitle": "Ultimate comparison framework",
+  "selecttitle": "Criteria",
+  "tabletitle": "Comparison of DOM manipulation libraries",
+  "details": {
+    "header-label": "Performance",
+    "body-main-title": "Description",
+    "body": "Description",
+    "body-attachment-tags": [
+      "Performance",
+      "License",
+      "Showcase 2.0"
+    ]
+  },
+  "repository": "https://github.com/ultimate-comparisons/ultimate-comparison-BASE.git"
+}
