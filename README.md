@@ -1,6 +1,6 @@
 # Ultimate Comparison BASE
 
-[![Build Status](https://travis-ci.org/ultimate-comparisons/ultimate-comparison-BASE.svg?branch=master)](https://travis-ci.org/ultimate-comparisons/ultimate-comparison-BASE)
+[![Build Status](https://travis-ci.org/TSDBBench/Ultimate-TSDB-Comparison.svg?branch=master)](https://travis-ci.org/TSDBBench/Ultimate-TSDB-Comparison)
 
 This is an ultimate comparison framework written in angular2.
 
