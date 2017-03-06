@@ -1,17 +1,27 @@
 {
-  "title": "Ultimate-Comparison",
-  "subtitle": "Ultimate comparison framework",
+  "title": "Ultimate-TSDB-Comparison",
+  "subtitle": "Ultimate Comparison of open source TSDBs",
   "selecttitle": "Criteria",
-  "tabletitle": "Comparison of DOM manipulation libraries",
+  "tabletitle": "Comparison of open source TSDBs",
   "details": {
-    "header-label": "Performance",
+    "header-label": "Comparison",
     "body-main-title": "Description",
     "body": "Description",
     "body-attachment-tags": [
-      "Performance",
+      "Clusterability Features",
+      "Functions",
+      "Advanced Functions",
+      "Sampling",
+      "Smallest Sample Interval",
+      "Smallest Storage Granularity",
+      "Smallest Guaranteed Storage Granularity",
+      "APIs/Interfaces",
+      "Client Libraries",
+      "Extensibility",
       "License",
-      "Showcase 2.0"
+      "Stable Version",
+      "Commercial Support"
     ]
   },
-  "repository": "https://github.com/ultimate-comparisons/ultimate-comparison-BASE.git"
+  "repository": "https://github.com/TSDBBench/Ultimate-TSDB-Comparison.git"
 }

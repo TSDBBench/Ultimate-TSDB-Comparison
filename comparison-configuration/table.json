@@ -1,120 +1,346 @@
 [
-  {
-    "name": "Name",
-    "tag": "tag",
-    "urlTag": "url",
-    "style": "width: 5%",
-    "display": true,
-    "type": {
-      "tag": "url"
+    {
+        "name": "Name",
+        "tag": "tag",
+        "urlTag": "url",
+        "style": "width: 5%",
+        "display": true,
+        "type": {
+          "tag": "url"
+        },
+        "valign": "top"
     },
-    "valign": "top"
-  },
-  {
-    "name": "",
-    "tag": "Rating",
-    "display": true,
-    "type": {
-      "tag": "rating"
-    }
-  },
-  {
-    "name": "Short Description",
-    "tag": "descr",
-    "style": "width: 25%",
-    "display": true,
-    "type": {
-      "tag": "text"
-    }
-  },
-  {
-    "name": "Performance",
-    "tag": "Performance",
-    "style": "width: 5%",
-    "display": true,
-    "type": {
-      "tag": "label",
-      "values": [
-        {
-          "name": "slow",
-          "description": "Overall performance above 200ms.",
-          "class": "label-danger"
-        },
-        {
-          "name": "fast",
-          "description": "Overall performance below 200ms.",
-          "class": "label-success"
+    {
+        "name": "Clusterability Features",
+        "tag": "Clusterability Features",
+        "style": "width: 5%",
+        "display": true,
+        "type": {
+          "tag": "label",
+          "values": [
+              {
+                  "name": "High Availability"
+              },
+              {
+                  "name": "Scalability"
+              },
+              {
+                  "name": "Load Balancing"
+              }
+            ]
         }
-      ]
-    }
-  },
-  {
-    "name": "License",
-    "tag": "License",
-    "display": false,
-    "type": {
-      "tag": "label",
-      "class": "label label-info",
-      "values": [
-        {
-          "name": "MIT",
-          "description": "http://choosealicense.com/licenses/mit/"
-        },
-        {
-          "name": "Apache 2.0",
-          "description": "http://choosealicense.com/licenses/apache-2.0/"
-        },
-        {
-          "name": "MPL 2.0",
-          "description": "http://choosealicense.com/licenses/mpl-2.0/"
+    },
+    {
+        "name": "Functions",
+        "tag": "Functions",
+        "style": "width: 5%",
+        "display": true,
+        "type": {
+          "tag": "label",
+          "values": [
+              {
+                  "name": "INS"
+              },
+              {
+                  "name": "READ"
+              },
+              {
+                  "name": "SCAN"
+              },
+              {
+                  "name": "AVG"
+              },
+              {
+                  "name": "SUM"
+              },
+              {
+                  "name": "CNT"
+              },
+              {
+                  "name": "MAX"
+              },
+              {
+                  "name": "MIN"
+              },
+              {
+                  "name": "UPD"
+              },
+              {
+                  "name": "DEL"
+              }
+            ]
         }
-      ]
-    }
-  },
-  {
-    "name": "Showcase",
-    "tag": "Showcase 2.0",
-    "style": "width: 5%",
-    "display": true,
-    "type": {
-      "tag": "label",
-      "values": [
-        {
-          "name": "red 1",
-          "description": "Show case for red label 1",
-          "class": "label-danger"
-        },
-        {
-          "name": "red 2",
-          "description": "Show case for red label 2",
-          "class": "label-danger"
-        },
-        {
-          "name": "green",
-          "description": "Show case for green label",
-          "class": "label-success"
-        },
-        {
-          "name": "yellow",
-          "description": "Show case for yellow label",
-          "class": "label-warning"
-        },
-        {
-          "name": "dark blue",
-          "description": "Show case for dark blue label",
-          "class": "label-primary"
-        },
-        {
-          "name": "grey",
-          "description": "Show case for grey label",
-          "class": "label-default"
-        },
-        {
-          "name": "light blue",
-          "description": "",
-          "class": "label-info"
+    },
+    {
+        "name": "Advanced Functions",
+        "tag": "Advanced Functions",
+        "style": "width: 5%",
+        "display": true,
+        "type": {
+          "tag": "label",
+          "values": [
+              {
+                  "name": "Continuous Calculation"
+              },
+              {
+                  "name": "Tags"
+              },
+              {
+                  "name": "Long-term Storage"
+              },
+              {
+                  "name": "Matrix Time Series"
+              }
+            ]
         }
-      ]
+    },
+    {
+        "name": "Sampling",
+        "tag": "Sampling",
+        "style": "width: 5%",
+        "display": true,
+        "type": {
+          "tag": "label",
+          "values": [
+              {
+                  "name": "Downsampling"
+              }
+            ]
+        }
+    },
+    {
+        "name": "Smallest Sample Interval",
+        "tag": "Smallest Sample Interval",
+        "style": "width: 5%",
+        "display": true,
+        "type": {
+          "tag": "label",
+          "values": [
+              {
+                  "name": "1 ms"
+              },
+              {
+                  "name": "2 ms"
+              }
+            ]
+        }
+    },
+    {
+        "name": "Smallest Storage Interval",
+        "tag": "Smallest Sorage Interval",
+        "style": "width: 5%",
+        "display": false,
+        "type": {
+          "tag": "label",
+          "values": [
+              {
+                  "name": "1 ms"
+              }
+            ]
+        }
+    },
+    {
+        "name": "Smallest Guaranteed Storage Interval",
+        "tag": "Smallest Guaranteed Sorage Interval",
+        "style": "width: 5%",
+        "display": false,
+        "type": {
+          "tag": "label",
+          "values": [
+              {
+                  "name": "1 ms"
+              },
+              {
+                  "name": ">1 ms"
+              }
+            ]
+        }
+    },
+    {
+        "name": "APIs/Interfaces",
+        "tag": "APIs/Interfaces",
+        "style": "width: 5%",
+        "display": true,
+        "type": {
+          "tag": "label",
+          "values": [
+              {
+                  "name": "CLI"
+              },
+              {
+                  "name": "HTTP GUI"
+              },
+              {
+                  "name": "Graphite"
+              },
+              {
+                  "name": "HTTP"
+              },
+              {
+                  "name": "REST"
+              },
+              {
+                  "name": "JSON"
+              },
+              {
+                  "name": "Kafka"
+              },
+              {
+                  "name": "statsD"
+              },
+              {
+                  "name": "UDP"
+              },
+              {
+                  "name": "Telnet"
+              },
+              {
+                  "name": "Azure"
+              },
+              {
+                  "name": "RabbitMQ"
+              },
+              {
+                  "name": "S3"
+              },
+              {
+                  "name": "Spritzer"
+              },
+              {
+                  "name": "Samza"
+              },
+              {
+                  "name": "Spark"
+              },
+              {
+                  "name": "Storm"
+              },
+              {
+                  "name": "Collectd"
+              },
+              {
+                  "name": "OpenTSDB"
+              }
+            ]
+        }
+    },
+    {
+        "name": "Client Libraries",
+        "tag": "Client Libraries",
+        "style": "width: 5%",
+        "display": true,
+        "type": {
+          "tag": "label",
+          "values": [
+              {
+                  "name": "Java"
+              },
+              {
+                  "name": "Python"
+              },
+              {
+                  "name": "R"
+              },
+              {
+                  "name": "Groovy"
+              },
+              {
+                  "name": ".NET"
+              },
+              {
+                  "name": "Perl"
+              },
+              {
+                  "name": "PHP"
+              },
+              {
+                  "name": "Ruby"
+              },
+              {
+                  "name": "C"
+              },
+              {
+                  "name": "Node.js"
+              },
+              {
+                  "name": "ODBC"
+              },
+              {
+                  "name": "Go"
+              },
+              {
+                  "name": "J"
+              },
+              {
+                  "name": "C++"
+              },
+              {
+                  "name": "Tcl"
+              }
+            ]
+        }
+    },
+    {
+        "name": "Extensibility",
+        "tag": "Extensibility",
+        "style": "width: 5%",
+        "display": false,
+        "type": {
+          "tag": "label",
+          "values": [
+              {
+                  "name": "Plugins"
+              }
+            ]
+        }
+    },
+    {
+        "name": "License",
+        "tag": "License",
+        "style": "width: 5%",
+        "display": true,
+        "type": {
+          "tag": "label",
+          "values": [
+              {
+                  "name": "Apache 2.0"
+              },
+              {
+                  "name": "LGPLv2.1+"
+              },
+              {
+                  "name": "GPLv3+"
+              },
+              {
+                  "name": "MIT"
+              },
+              {
+                  "name": "MonetDB Public"
+              },
+              {
+                  "name": "GPLv2"
+              },
+              {
+                  "name": "PostgreSQL"
+              }
+            ]
+        }
+    },
+    {
+        "name": "Stable Version and Commercial Support",
+        "tag": "Stable Version and Commercial Support",
+        "style": "width: 5%",
+        "display": false,
+        "type": {
+          "tag": "label",
+          "values": [
+              {
+                  "name": "Stable Version"
+              },
+              {
+                  "name": "Commercial Support"
+              }
+            ]
+        }
     }
-  }
 ]
