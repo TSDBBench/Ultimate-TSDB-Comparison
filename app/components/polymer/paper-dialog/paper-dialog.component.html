@@ -1,0 +1,6 @@
+<div class="dialog" *ngIf="opened">
+    <ng-content></ng-content>
+    <div class="buttons">
+        <pbutton (click)="close()">Close</pbutton>
+    </div>
+</div>

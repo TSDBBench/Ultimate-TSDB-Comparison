@@ -1,0 +1,29 @@
+:host {
+    display: block;
+    padding: 0;
+}
+
+.mylabel {
+    margin: 2px;
+    display: inline-block !important;
+    cursor: pointer;
+    font-size: 14px !important;
+    white-space: inherit;
+}
+
+.card-content {
+    padding: 0 16 16 16;
+    position: relative;
+}
+
+pcard /deep/ .paper-header {
+    font-size: 18px;
+}
+
+.tooltip-text {
+    display: inline-table;
+}
+
+.tooltip-text /deep/ ul {
+    padding-left: 15px;
+}

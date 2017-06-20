@@ -1,0 +1,85 @@
+[
+  {
+    "name": "Performance",
+    "tag": "Performance",
+    "description": "Performace of entry.",
+    "placeholder": "Select performace rating ...",
+    "and_search": true,
+    "values": [
+      {
+        "name": "slow",
+        "description": "I am slow!"
+      },
+      {
+        "name": "fast",
+        "description": "I am fast!"
+      }
+    ]
+  },
+  {
+    "name": "Licenses",
+    "tag": "License",
+    "description": "Popular licenses for DOM manipulation libraries.",
+    "placeholder": "Select license ...",
+    "and_search": false,
+    "values": [
+      {
+        "name": "MIT"
+      },
+      {
+        "name": "Apache 2.0"
+      },
+      {
+        "name": "MPL 2.0"
+      }
+    ]
+  },
+  {
+    "name": "Showcase",
+    "tag": "Showcase 2.0",
+    "description": "Popular showcases.",
+    "placeholder": "Select showcase ...",
+    "and_search": false,
+    "values": [
+      {
+        "name": "red 1"
+      },
+      {
+        "name": "red 2"
+      },
+      {
+        "name": "green"
+      },
+      {
+        "name": "yellow"
+      },
+      {
+        "name": "dark blue"
+      },
+      {
+        "name": "grey"
+      },
+      {
+        "name": "light blue"
+      }
+    ]
+  },
+  {
+    "name": "Uncolored",
+    "tag": "Uncolored",
+    "description": "Tags that were originally uncolored.",
+    "placeholder": "Select color ...",
+    "and_search": false,
+    "values": [
+      {
+        "name": "color 1"
+      },
+      {
+        "name": "color 2"
+      },
+      {
+        "name": "color 3"
+      }
+    ]
+  }
+]

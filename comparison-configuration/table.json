@@ -1,0 +1,142 @@
+[
+  {
+    "name": "Name",
+    "tag": "tag",
+    "urlTag": "url",
+    "style": "width: 5%",
+    "display": true,
+    "type": {
+      "tag": "url"
+    },
+    "valign": "top"
+  },
+  {
+    "name": "",
+    "tag": "Rating",
+    "display": true,
+    "type": {
+      "tag": "rating"
+    }
+  },
+  {
+    "name": "Short Description",
+    "tag": "descr",
+    "style": "width: 25%",
+    "display": true,
+    "type": {
+      "tag": "text"
+    }
+  },
+  {
+    "name": "Performance",
+    "tag": "Performance",
+    "style": "width: 5%",
+    "display": true,
+    "type": {
+      "tag": "label",
+      "values": [
+        {
+          "name": "slow",
+          "description": "Overall performance above 200ms.",
+          "class": "label-danger"
+        },
+        {
+          "name": "fast",
+          "description": "Overall performance below 200ms.",
+          "class": "label-success"
+        }
+      ]
+    }
+  },
+  {
+    "name": "License",
+    "tag": "License",
+    "display": false,
+    "type": {
+      "tag": "label",
+      "class": "label label-info",
+      "values": [
+        {
+          "name": "MIT",
+          "description": "<http://choosealicense.com/licenses/mit/>"
+        },
+        {
+          "name": "Apache 2.0",
+          "description": "http://choosealicense.com/licenses/apache-2.0/"
+        },
+        {
+          "name": "MPL 2.0",
+          "description": "http://choosealicense.com/licenses/mpl-2.0/"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Showcase",
+    "tag": "Showcase 2.0",
+    "style": "width: 5%",
+    "display": true,
+    "type": {
+      "tag": "label",
+      "values": [
+        {
+          "name": "red 1",
+          "description": "Show case for red label 1",
+          "class": "label-danger"
+        },
+        {
+          "name": "red 2",
+          "description": "Show case for red label 2",
+          "class": "label-danger"
+        },
+        {
+          "name": "green",
+          "description": "Show case for green label",
+          "class": "label-success"
+        },
+        {
+          "name": "yellow",
+          "description": "Show case for yellow label",
+          "class": "label-warning"
+        },
+        {
+          "name": "dark blue",
+          "description": "Show case for dark blue label",
+          "class": "label-primary"
+        },
+        {
+          "name": "grey",
+          "description": "Show case for grey label",
+          "class": "label-default"
+        },
+        {
+          "name": "light blue",
+          "description": "",
+          "class": "label-info"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Uncolored",
+    "tag": "Uncolored",
+    "display": true,
+    "type": {
+      "tag": "label",
+      "values": [
+        {
+          "name": "color 1",
+          "description": "Color 1"
+        },
+        {
+          "name": "color 2",
+          "description": "Color 2"
+        },
+        {
+          "name": "color 3",
+          "description": "Color 3"
+        }
+      ]
+    }
+  }
+]
