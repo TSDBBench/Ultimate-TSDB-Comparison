@@ -1,4 +1,2 @@
-This is a comparison of available THINGs.
-- Bibkey example 1 [@Adi:2004:ASM:988145.988150]
-- Bibkey example 2 [@Dayal:1988:ROT:60295.60304]
-- [Link example](http://example.com).
+This is a comparison of open source Time Series Databases (TSDBs).
+It is based on the publication [Survey and Comparison of Open Source Time Series Databases](http://btw2017.informatik.uni-stuttgart.de/slidesandpapers/E4-14-109/paper_web.pdf) [[slides](http://btw2017.informatik.uni-stuttgart.de/slidesandpapers/E4-14-109/slides.pdf)].

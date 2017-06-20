@@ -1,6 +1,6 @@
 # Ultimate Comparison BASE
 
-[![Build Status](https://travis-ci.org/ultimate-comparisons/ultimate-comparison-BASE.svg?branch=master)](https://travis-ci.org/ultimate-comparisons/ultimate-comparison-BASE)
+[![Build Status](https://travis-ci.org/TSDBBench/Ultimate-TSDB-Comparison.svg?branch=master)](https://travis-ci.org/TSDBBench/Ultimate-TSDB-Comparison)
 
 This is an ultimate comparison framework written in angular2.
 
@@ -37,12 +37,10 @@ This is an ultimate comparison framework written in angular2.
   {
     "name": "slow",
     "description": "Overall performance above 200ms",
-    "class": "label-danger",
-    "color": "red"
+    "class": "label-danger"
   }
   ```
   - The label with the value "slow" has the tooltip "overall performance above 200ms", and will be red ("label-danger")
-  - You can choose between red and class, classes are the preferred way. If both are missing, an automatic color is assigned.
 
   ![table.json](https://cdn.rawgit.com/ultimate-comparisons/ultimate-comparison-BASE/master/media/table.svg) 
 3. The file `comparison-configuration/criteria.json` defines filter criterias for the table data.
@@ -85,7 +83,7 @@ The code is licensed under [MIT], the content (located at `comparison-elements`)
 
 <hr />
 
-See [README-THING.template](https://github.com/ultimate-comparisons/ultimate-comparison-BASE/blob/master/README-THING.template.md) for a README skeletton for your ultimate-THING-comparison.
+See [README-THING.tempalte](https://github.com/ultimate-comparisons/ultimate-comparison-BASE/blob/master/README-THING.template.md) for a README skeletton for your ultimate-THING-comparison.
 
   [MIT]: https://opensource.org/licenses/MIT
   [CC-BY-SA-4.0]: http://creativecommons.org/licenses/by-sa/4.0/
