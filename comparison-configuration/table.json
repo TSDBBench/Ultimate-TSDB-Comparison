@@ -6,7 +6,7 @@
         "style": "width: 5%",
         "display": true,
         "type": {
-          "tag": "url"
+            "tag": "url"
         },
         "valign": "top"
     },
@@ -16,17 +16,20 @@
         "style": "width: 5%",
         "display": true,
         "type": {
-          "tag": "label",
-          "values": [
-              {
-                  "name": "High Availability"
-              },
-              {
-                  "name": "Scalability"
-              },
-              {
-                  "name": "Load Balancing"
-              }
+            "tag": "label",
+            "values": [
+                {
+                    "name": "High Availability",
+                    "color": "#EA3711"
+                },
+                {
+                    "name": "Scalability",
+                    "color": "#11EAD3"
+                },
+                {
+                    "name": "Load Balancing",
+                    "color": "#4F11EA"
+                }
             ]
         }
     },
@@ -36,38 +39,48 @@
         "style": "width: 5%",
         "display": true,
         "type": {
-          "tag": "label",
-          "values": [
-              {
-                  "name": "INS"
-              },
-              {
-                  "name": "READ"
-              },
-              {
-                  "name": "SCAN"
-              },
-              {
-                  "name": "AVG"
-              },
-              {
-                  "name": "SUM"
-              },
-              {
-                  "name": "CNT"
-              },
-              {
-                  "name": "MAX"
-              },
-              {
-                  "name": "MIN"
-              },
-              {
-                  "name": "UPD"
-              },
-              {
-                  "name": "DEL"
-              }
+            "tag": "label",
+            "values": [
+                {
+                    "name": "INS",
+                    "color": "#EA3711"
+                },
+                {
+                    "name": "READ",
+                    "color": "#11EAD3"
+                },
+                {
+                    "name": "SCAN",
+                    "color": "#4F11EA"
+                },
+                {
+                    "name": "AVG",
+                    "color": "#EA6311"
+                },
+                {
+                    "name": "SUM",
+                    "color": "#C6EA11"
+                },
+                {
+                    "name": "CNT",
+                    "color": "#113FEA"
+                },
+                {
+                    "name": "MAX",
+                    "color": "#77EA11"
+                },
+                {
+                    "name": "MIN",
+                    "color": "#9811EA"
+                },
+                {
+                    "name": "UPD",
+                    "color": "#2BEA11"
+                },
+                {
+                    "name": "DEL",
+                    "color": "#EA9E11"
+                }
             ]
         }
     },
@@ -77,20 +90,24 @@
         "style": "width: 5%",
         "display": true,
         "type": {
-          "tag": "label",
-          "values": [
-              {
-                  "name": "Continuous Calculation"
-              },
-              {
-                  "name": "Tags"
-              },
-              {
-                  "name": "Long-term Storage"
-              },
-              {
-                  "name": "Matrix Time Series"
-              }
+            "tag": "label",
+            "values": [
+                {
+                    "name": "Continuous Calculation",
+                    "color": "#EA3711"
+                },
+                {
+                    "name": "Tags",
+                    "color": "#11EAD3"
+                },
+                {
+                    "name": "Long-term Storage",
+                    "color": "#4F11EA"
+                },
+                {
+                    "name": "Matrix Time Series",
+                    "color": "#EA6311"
+                }
             ]
         }
     },
@@ -100,11 +117,12 @@
         "style": "width: 5%",
         "display": true,
         "type": {
-          "tag": "label",
-          "values": [
-              {
-                  "name": "Downsampling"
-              }
+            "tag": "label",
+            "values": [
+                {
+                    "name": "Downsampling",
+                    "color": "#EA3711"
+                }
             ]
         }
     },
@@ -114,14 +132,16 @@
         "style": "width: 5%",
         "display": true,
         "type": {
-          "tag": "label",
-          "values": [
-              {
-                  "name": "1 ms"
-              },
-              {
-                  "name": "2 ms"
-              }
+            "tag": "label",
+            "values": [
+                {
+                    "name": "1 ms",
+                    "color": "#EA3711"
+                },
+                {
+                    "name": "2 ms",
+                    "color": "#11EAD3"
+                }
             ]
         }
     },
@@ -131,11 +151,12 @@
         "style": "width: 5%",
         "display": false,
         "type": {
-          "tag": "label",
-          "values": [
-              {
-                  "name": "1 ms"
-              }
+            "tag": "label",
+            "values": [
+                {
+                    "name": "1 ms",
+                    "color": "#EA3711"
+                }
             ]
         }
     },
@@ -145,14 +166,16 @@
         "style": "width: 5%",
         "display": false,
         "type": {
-          "tag": "label",
-          "values": [
-              {
-                  "name": "1 ms"
-              },
-              {
-                  "name": ">1 ms"
-              }
+            "tag": "label",
+            "values": [
+                {
+                    "name": "1 ms",
+                    "color": "#EA3711"
+                },
+                {
+                    "name": ">1 ms",
+                    "color": "#11EAD3"
+                }
             ]
         }
     },
@@ -162,65 +185,84 @@
         "style": "width: 5%",
         "display": true,
         "type": {
-          "tag": "label",
-          "values": [
-              {
-                  "name": "CLI"
-              },
-              {
-                  "name": "HTTP GUI"
-              },
-              {
-                  "name": "Graphite"
-              },
-              {
-                  "name": "HTTP"
-              },
-              {
-                  "name": "REST"
-              },
-              {
-                  "name": "JSON"
-              },
-              {
-                  "name": "Kafka"
-              },
-              {
-                  "name": "statsD"
-              },
-              {
-                  "name": "UDP"
-              },
-              {
-                  "name": "Telnet"
-              },
-              {
-                  "name": "Azure"
-              },
-              {
-                  "name": "RabbitMQ"
-              },
-              {
-                  "name": "S3"
-              },
-              {
-                  "name": "Spritzer"
-              },
-              {
-                  "name": "Samza"
-              },
-              {
-                  "name": "Spark"
-              },
-              {
-                  "name": "Storm"
-              },
-              {
-                  "name": "Collectd"
-              },
-              {
-                  "name": "OpenTSDB"
-              }
+            "tag": "label",
+            "values": [
+                {
+                    "name": "CLI",
+                    "color": "#EA3711"
+                },
+                {
+                    "name": "HTTP GUI",
+                    "color": "#11EAD3"
+                },
+                {
+                    "name": "Graphite",
+                    "color": "#4F11EA"
+                },
+                {
+                    "name": "HTTP",
+                    "color": "#EA6311"
+                },
+                {
+                    "name": "REST",
+                    "color": "#C6EA11"
+                },
+                {
+                    "name": "JSON",
+                    "color": "#113FEA"
+                },
+                {
+                    "name": "Kafka",
+                    "color": "#77EA11"
+                },
+                {
+                    "name": "statsD",
+                    "color": "#9811EA"
+                },
+                {
+                    "name": "UDP",
+                    "color": "#2BEA11"
+                },
+                {
+                    "name": "Telnet",
+                    "color": "#EA9E11"
+                },
+                {
+                    "name": "Azure",
+                    "color": "#11BCEA"
+                },
+                {
+                    "name": "RabbitMQ",
+                    "color": "#11EA7A"
+                },
+                {
+                    "name": "S3",
+                    "color": "#1E11EA"
+                },
+                {
+                    "name": "Spritzer",
+                    "color": "#EAD311"
+                },
+                {
+                    "name": "Samza",
+                    "color": "#8411EA"
+                },
+                {
+                    "name": "Spark",
+                    "color": "#BC11EA"
+                },
+                {
+                    "name": "Storm",
+                    "color": "#1187EA"
+                },
+                {
+                    "name": "Collectd",
+                    "color": "#EA11BF"
+                },
+                {
+                    "name": "OpenTSDB",
+                    "color": "#EA3711"
+                }
             ]
         }
     },
@@ -230,53 +272,68 @@
         "style": "width: 5%",
         "display": true,
         "type": {
-          "tag": "label",
-          "values": [
-              {
-                  "name": "Java"
-              },
-              {
-                  "name": "Python"
-              },
-              {
-                  "name": "R"
-              },
-              {
-                  "name": "Groovy"
-              },
-              {
-                  "name": ".NET"
-              },
-              {
-                  "name": "Perl"
-              },
-              {
-                  "name": "PHP"
-              },
-              {
-                  "name": "Ruby"
-              },
-              {
-                  "name": "C"
-              },
-              {
-                  "name": "Node.js"
-              },
-              {
-                  "name": "ODBC"
-              },
-              {
-                  "name": "Go"
-              },
-              {
-                  "name": "J"
-              },
-              {
-                  "name": "C++"
-              },
-              {
-                  "name": "Tcl"
-              }
+            "tag": "label",
+            "values": [
+                {
+                    "name": "Java",
+                    "color": "#EA3711"
+                },
+                {
+                    "name": "Python",
+                    "color": "#11EAD3"
+                },
+                {
+                    "name": "R",
+                    "color": "#4F11EA"
+                },
+                {
+                    "name": "Groovy",
+                    "color": "#EA6311"
+                },
+                {
+                    "name": ".NET",
+                    "color": "#C6EA11"
+                },
+                {
+                    "name": "Perl",
+                    "color": "#113FEA"
+                },
+                {
+                    "name": "PHP",
+                    "color": "#77EA11"
+                },
+                {
+                    "name": "Ruby",
+                    "color": "#9811EA"
+                },
+                {
+                    "name": "C",
+                    "color": "#2BEA11"
+                },
+                {
+                    "name": "Node.js",
+                    "color": "#EA9E11"
+                },
+                {
+                    "name": "ODBC",
+                    "color": "#11BCEA"
+                },
+                {
+                    "name": "Go",
+                    "color": "#11EA7A"
+                },
+                {
+                    "name": "J",
+                    "color": "#1E11EA"
+                },
+                {
+                    "name": "C++",
+                    "color": "#EAD311"
+                },
+                {
+                    "name": "Tcl",
+                    "color": "#8411EA"
+                }
             ]
         }
     },
@@ -286,11 +343,12 @@
         "style": "width: 5%",
         "display": false,
         "type": {
-          "tag": "label",
-          "values": [
-              {
-                  "name": "Plugins"
-              }
+            "tag": "label",
+            "values": [
+                {
+                    "name": "Plugins",
+                    "color": "#EA3711"
+                }
             ]
         }
     },
@@ -300,29 +358,36 @@
         "style": "width: 5%",
         "display": true,
         "type": {
-          "tag": "label",
-          "values": [
-              {
-                  "name": "Apache 2.0"
-              },
-              {
-                  "name": "LGPLv2.1+"
-              },
-              {
-                  "name": "GPLv3+"
-              },
-              {
-                  "name": "MIT"
-              },
-              {
-                  "name": "MonetDB Public"
-              },
-              {
-                  "name": "GPLv2"
-              },
-              {
-                  "name": "PostgreSQL"
-              }
+            "tag": "label",
+            "values": [
+                {
+                    "name": "Apache 2.0",
+                    "color": "#EA3711"
+                },
+                {
+                    "name": "LGPLv2.1+",
+                    "color": "#11EAD3"
+                },
+                {
+                    "name": "GPLv3+",
+                    "color": "#4F11EA"
+                },
+                {
+                    "name": "MIT",
+                    "color": "#EA6311"
+                },
+                {
+                    "name": "MonetDB Public",
+                    "color": "#C6EA11"
+                },
+                {
+                    "name": "GPLv2",
+                    "color": "#113FEA"
+                },
+                {
+                    "name": "PostgreSQL",
+                    "color": "#77EA11"
+                }
             ]
         }
     },
@@ -332,14 +397,16 @@
         "style": "width: 5%",
         "display": false,
         "type": {
-          "tag": "label",
-          "values": [
-              {
-                  "name": "Stable Version"
-              },
-              {
-                  "name": "Commercial Support"
-              }
+            "tag": "label",
+            "values": [
+                {
+                    "name": "Stable Version",
+                    "color": "#EA3711"
+                },
+                {
+                    "name": "Commercial Support",
+                    "color": "#11EAD3"
+                }
             ]
         }
     }
