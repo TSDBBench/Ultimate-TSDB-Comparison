@@ -1,8 +1,7 @@
-<ng-select
-        [options]="options"
+<ng-select #selector
+        [items]="options"
         [multiple]=true
         (selected)="select($event)"
-        (deselected)="deSelect($event)"
-        placeholder="{{placeholder}}">
+        (removed)="deSelect($event)"
+        [placeholder]="placeholder">
 </ng-select>
-

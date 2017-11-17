@@ -1,5 +1,5 @@
-import { Pipe, PipeTransform } from "@angular/core";
-import { DomSanitizer, SafeHtml } from "@angular/platform-browser";
+import { Pipe, PipeTransform } from '@angular/core';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 @Pipe({
     name: 'sanitizeHtml',
@@ -11,9 +11,12 @@ export class SanitizerPipe implements PipeTransform {
     }
 
     transform(v: string): SafeHtml {
-        let html = this._sanitizer.bypassSecurityTrustHtml(v);
-        if (html.hasOwnProperty("changingThisBreaksApplicationSecurity") && /^<p>\d+\./.test(html["changingThisBreaksApplicationSecurity"])) {
-            html["changingThisBreaksApplicationSecurity"] = "<p>" + html["changingThisBreaksApplicationSecurity"].substr(html["changingThisBreaksApplicationSecurity"].indexOf('.') + 1);
+        const html = this._sanitizer.bypassSecurityTrustHtml(v);
+        if (html.hasOwnProperty('changingThisBreaksApplicationSecurity') &&
+            /^<p>\d+\./.test(html['changingThisBreaksApplicationSecurity'])) {
+            html['changingThisBreaksApplicationSecurity'] =
+                '<p>' + html['changingThisBreaksApplicationSecurity']
+                    .substr(html['changingThisBreaksApplicationSecurity'].indexOf('.') + 1);
         }
         return html;
     }

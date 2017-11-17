@@ -1,9 +1,10 @@
-import { Component, Input } from "@angular/core";
-import { TableData, Type, Data } from "../shared/index";
-import { ComparisonConfigService } from "./comparison-config.service";
-import { ComparisonDataService } from "./comparison-data.service";
-import { ComparisonService } from "./comparison.service";
-import { ComparisonCitationService } from "./comparison-citation.service";
+import { Component, Input } from '@angular/core';
+import { TableData, Type, Data } from '../shared/index';
+import { ComparisonConfigService } from './comparison-config.service';
+import { ComparisonDataService } from './comparison-data.service';
+import { ComparisonService } from './comparison.service';
+import { ComparisonCitationService } from './comparison-citation.service';
+import { isNullOrUndefined } from "util";
 
 @Component({
     selector: 'comparison-details',
@@ -13,7 +14,7 @@ import { ComparisonCitationService } from "./comparison-citation.service";
 export class ComparisonDetailsComponent {
     @Input() data: Data;
 
-    private opened: boolean = false;
+    private opened = false;
     private modalSelected: string;
     private selected: string;
     private template: string;
@@ -21,14 +22,14 @@ export class ComparisonDetailsComponent {
     private table;
     private detail;
     private header = {
-        html: "",
-        text: "",
+        html: '',
+        text: '',
         label: {},
-        url: "",
+        url: '',
         column: new TableData(),
     };
 
-    private body: string = "";
+    private body = '';
 
     constructor(public serv: ComparisonService,
                 public dataServ: ComparisonDataService,
@@ -37,40 +38,49 @@ export class ComparisonDetailsComponent {
     }
 
     private getBody(): string {
-        let body = this.confServ.comparison ? this.serv.converter.makeHtml(this.data.getProperty(this.confServ.comparison.details.body).plain) : "";
-        if (body && body != this.body) {
+        let data = <string> this.data.getProperty(this.confServ.comparison.details.body).plain;
+        if (isNullOrUndefined(data)) {
+            data = String(this.data.getProperty(this.confServ.comparison.details.body).plain);
+        }
+        const body = this.confServ.comparison ?
+            this.serv.converter.makeHtml(data) : '';
+        if (body && body !== this.body) {
             this.body = body;
         }
         return this.body;
     }
 
     private getHeaderText(): string {
-        let headerText = this.confServ.comparison ? this.data[this.confServ.comparison.details.header] : "";
-        if (headerText && headerText != this.header.text) {
+        const headerText = this.confServ.comparison ? this.data[this.confServ.comparison.details.header] : '';
+        if (headerText && headerText !== this.header.text) {
             this.header.text = headerText;
         }
         return this.header.text;
     }
 
     private getHeaderUrl(): string {
-        let headerUrl = this.confServ.comparison ? this.data[this.confServ.comparison.details.headerUrl] : "";
-        if (headerUrl && headerUrl != this.header.url) {
+        const headerUrl = this.confServ.comparison ? this.data[this.confServ.comparison.details.headerUrl] : '';
+        if (headerUrl && headerUrl !== this.header.url) {
             this.header.url = headerUrl;
         }
         return this.header.url;
     }
 
     private getHeaderColumn(): TableData {
-        let headerColumn = (this.confServ.comparison && this.confServ.tableDataSet) ? this.confServ.tableDataSet.getTableData(this.confServ.comparison.details.headerLabel) : new TableData();
-        if (headerColumn && headerColumn != this.header.column) {
+        const headerColumn = (this.confServ.comparison && this.confServ.tableDataSet) ?
+            this.confServ.tableDataSet.getTableData(this.confServ.comparison.details.headerLabel) :
+            new TableData();
+        if (headerColumn && headerColumn !== this.header.column) {
             this.header.column = headerColumn;
         }
         return this.header.column;
     }
 
     private getHeaderLabel(): Type {
-        let headerLabel = (this.confServ.comparison && this.confServ.tableDataSet) ? this.confServ.tableDataSet.getTableData(this.confServ.comparison.details.headerLabel).type : new Type();
-        if (headerLabel && headerLabel != this.header.label) {
+        const headerLabel = (this.confServ.comparison && this.confServ.tableDataSet) ?
+            this.confServ.tableDataSet.getTableData(this.confServ.comparison.details.headerLabel).type :
+            new Type();
+        if (headerLabel && headerLabel !== this.header.label) {
             this.header.label = headerLabel;
         }
         return headerLabel;

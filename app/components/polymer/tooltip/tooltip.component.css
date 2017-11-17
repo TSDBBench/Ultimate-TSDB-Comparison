@@ -8,17 +8,18 @@
     min-width: 60px;
     background-color: black;
     color: #fff;
-    text-align: center;
-    padding: 5px;
+    padding: 10px;
     border-radius: 6px;
 
     position: absolute;
     z-index: 4999;
-
-    white-space: nowrap;
-
     transition-property: visibility;
     transition-duration: 0.1s;
+    display: grid;
+    grid-template-columns: auto;
+    grid-column-gap: 10px;
+    grid-auto-flow: row;
+    width: 180px;
 }
 
 :host .ptooltiptext /deep/ a {

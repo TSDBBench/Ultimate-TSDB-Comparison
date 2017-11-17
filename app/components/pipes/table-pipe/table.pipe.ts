@@ -1,5 +1,5 @@
-import { Pipe, PipeTransform } from "@angular/core";
-import { TableData } from "./../../comparison/shared/index";
+import { Pipe, PipeTransform } from '@angular/core';
+import { TableData } from './../../comparison/shared/index';
 
 @Pipe({
     name: 'tablefilter',
@@ -7,6 +7,6 @@ import { TableData } from "./../../comparison/shared/index";
 })
 export class TablePipe implements PipeTransform {
     transform(value: Array<TableData>, args: any): Array<TableData> {
-        return value.filter((item) => item.display)
+        return value.filter((item) => item.display);
     }
 }

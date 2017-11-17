@@ -1,16 +1,16 @@
 export class RatingSet {
-    private set: Array<Rating> = new Array<Rating>();
+    private set: Array<Rating> = [];
 
-    private average: number = 0;
-    private sum: number = 0;
+    private average = 0;
+    private sum = 0;
 
     constructor(jsonObj: any) {
-        if (jsonObj.hasOwnProperty("childs")) {
+        if (jsonObj.hasOwnProperty('childs')) {
             jsonObj.childs[0][0].forEach(item => {
-                let starsString: string = /\[(\d*)\]/gm.exec(item.content)[1];
-                let stars: number = parseInt(starsString);
-                let text: string = /(?:\[\d*\])((?:.|\n)*)/gm.exec(item.content)[1];
-                let rating: Rating = new Rating(stars, text);
+                const starsString: string = /\[(\d*)\]/gm.exec(item.content)[1];
+                const stars: number = parseInt(starsString, 10);
+                const text: string = /(?:\[\d*\])((?:.|\n)*)/gm.exec(item.content)[1];
+                const rating: Rating = new Rating(stars, text);
                 this.set.push(rating);
                 this.sum += stars;
             });

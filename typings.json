@@ -2,8 +2,8 @@
   "globalDependencies": {
     "core-js": "registry:dt/core-js#0.0.0+20160914114559",
     "filesaver": "registry:dt/filesaver#0.0.0+20160622185141",
-    "jasmine": "registry:dt/jasmine#2.5.0+20161003201800",
-    "jquery": "registry:dt/jquery#1.10.0+20160929162922",
+    "jasmine": "https://cdn.rawgit.com/DefinitelyTyped/DefinitelyTyped/a2c0d1ebc6ebc284367eedfe0dff3467b1dfc95e/jasmine/jasmine.d.ts",
+    "jquery": "https://cdn.rawgit.com/DefinitelyTyped/DefinitelyTyped/c8a69b0b0c71cc00d4ada94a4420fb037b3cc9cd/jquery/jquery.d.ts",
     "node": "registry:dt/node#6.0.0+20161010101523",
     "showdown": "registry:dt/showdown#1.4.1+20160608102004"
   }

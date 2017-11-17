@@ -1,29 +1,29 @@
-import { Injectable, ChangeDetectorRef } from "@angular/core";
-import { Http } from "@angular/http";
+import { Injectable, ChangeDetectorRef } from '@angular/core';
+import { Http } from '@angular/http';
 
 @Injectable()
 export class ComparisonCitationService {
     public bibEntriesHtml = {};
     public bibEntriesInline = {};
-    private keys: {[name: string]: string;} = {};
-    public references: Array<String> = new Array<String>();
+    private keys: {[name: string]: string; } = {};
+    public references: Array<String> = [];
 
-    public check: boolean = false;
-    private precheck: boolean = false;
-    public ready: boolean = false;
+    public check = false;
+    private precheck = false;
+    public ready = false;
 
     constructor(private http: Http) {
     }
 
-    public sortedReferences() : any[] {
-        let values: any[] = [];
-        for (let reference of this.references) {
-            let key: any = reference;
-            let entry: any = {"html": this.bibEntriesHtml[key]};
-            entry["key"] = key;
-            entry["index"] = this.bibEntriesInline[key];
-            entry["index"] = entry["index"].substr(1, entry["index"].length - 2);
-            values.push(entry)
+    public sortedReferences(): any[] {
+        const values: any[] = [];
+        for (const reference of this.references) {
+            const key: any = reference;
+            const entry: any = {'html': this.bibEntriesHtml[key]};
+            entry['key'] = key;
+            entry['index'] = this.bibEntriesInline[key];
+            entry['index'] = entry['index'].substr(1, entry['index'].length - 2);
+            values.push(entry);
         }
         return values.sort((a, b) => a.index - b.index);
     }
@@ -52,18 +52,19 @@ export class ComparisonCitationService {
     }
 
     public getUsedEntries() {
-        let entries: Array<any> = new Array<any>();
-        for (let key in this.keys) {
-            if (!this.keys.hasOwnProperty(key)) continue;
+        const entries: Array<any> = [];
+        for (const key in this.keys) {
+            if (!this.keys.hasOwnProperty(key)) {
+                continue;
+            }
             entries.push({key: key, html: this.bibEntriesHtml[this.keys[key]]});
         }
-        return entries.length > 0 ? entries : [{key: "emty", html: ""}];
+        return entries.length > 0 ? entries : [{key: 'emty', html: ''}];
     }
 
     public addUsedEntries(entries) {
-        let newEntries: Array<String> = new Array<String>();
-        for (let index in entries) {
-            let entry = entries[index];
+        const newEntries: Array<String> = new Array<String>();
+        for (const entry of entries) {
             if (!this.keys[entry]) {
                 newEntries.push(entry);
                 this.keys[entry] = entry;
