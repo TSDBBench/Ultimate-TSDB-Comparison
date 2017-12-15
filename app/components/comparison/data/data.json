@@ -1,5 +1,569 @@
 [
   {
+    "tag": "Akumuli - https://github.com/akumuli/Akumuli",
+    "descr": "",
+    "Functions": {
+      "plain": "- INS\n- READ\n- SCAN\n- SUM\n- CNT\n- MAX\n- MIN\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "INS",
+              "plain": "INS\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "READ",
+              "plain": "READ\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "SCAN",
+              "plain": "SCAN\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "SUM",
+              "plain": "SUM\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "CNT",
+              "plain": "CNT\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "MAX",
+              "plain": "MAX\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "MIN",
+              "plain": "MIN\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Advanced Functions": {
+      "plain": "- Tags\n- Long-term Storage\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "Tags",
+              "plain": "Tags\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Long-term Storage",
+              "plain": "Long-term Storage\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Smallest Sampling Interval": {
+      "plain": "- 1 ns\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "1 ns",
+              "plain": "1 ns\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Smalles Storage Granularity": {
+      "plain": "- 1 ns\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "1 ns",
+              "plain": "1 ns\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Smalles Guaranteed Storage Granularity": {
+      "plain": "- 1 ns\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "1 ns",
+              "plain": "1 ns\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "APIs/Interfaces": {
+      "plain": "- HTTP\n- JSON\n- OpenTSDB\n\t- only put\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "HTTP",
+              "plain": "HTTP\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "JSON",
+              "plain": "JSON\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "OpenTSDB",
+              "plain": "OpenTSDB\n",
+              "plainChilds": "\t- only put\n",
+              "childs": [
+                {
+                  "content": "only put",
+                  "plain": "only put\n",
+                  "plainChilds": "",
+                  "childs": []
+                }
+              ]
+            }
+          ]
+        ]
+      }
+    },
+    "Extensibility": {
+      "plain": "- Plugins\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "Plugins",
+              "plain": "Plugins\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "License": {
+      "plain": "- Apache 2.0\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "Apache 2.0",
+              "plain": "Apache 2.0\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Stable Version": {
+      "plain": "- Stable Version\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "Stable Version",
+              "plain": "Stable Version\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "tag": "Axibase - https://axibase.com/",
+    "descr": "",
+    "Clusterability Features": {
+      "plain": "- High Availability\n- Scalability\n- Load Balancing\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "High Availability",
+              "plain": "High Availability\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Scalability",
+              "plain": "Scalability\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Load Balancing",
+              "plain": "Load Balancing\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Functions": {
+      "plain": "- INS\n- READ\n- SCAN\n- AVG\n- SUM\n- CNT\n- MAX\n- MIN\n- UPD\n- DEL\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "INS",
+              "plain": "INS\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "READ",
+              "plain": "READ\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "SCAN",
+              "plain": "SCAN\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "AVG",
+              "plain": "AVG\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "SUM",
+              "plain": "SUM\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "CNT",
+              "plain": "CNT\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "MAX",
+              "plain": "MAX\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "MIN",
+              "plain": "MIN\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "UPD",
+              "plain": "UPD\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "DEL",
+              "plain": "DEL\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Advanced Functions": {
+      "plain": "- Tags\n- Long-term Storage\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "Tags",
+              "plain": "Tags\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Long-term Storage",
+              "plain": "Long-term Storage\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Sampling": {
+      "plain": "- Downsampling\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "Downsampling",
+              "plain": "Downsampling\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Smallest Sampling Interval": {
+      "plain": "- 1 ms\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "1 ms",
+              "plain": "1 ms\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Smalles Storage Granularity": {
+      "plain": "- 1 ms\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "1 ms",
+              "plain": "1 ms\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Smalles Guaranteed Storage Granularity": {
+      "plain": "- 1 ms\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "1 ms",
+              "plain": "1 ms\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "APIs/Interfaces": {
+      "plain": "- ActiveMQ\n- Alteryx Designer\n- Chartlab\n- collectd\n- Graphite \n- IBM Tivoli Monitoring\n- MatLab\n- scollector\n- stata\n- statsD\n- Tableau\n- tcollector\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "ActiveMQ",
+              "plain": "ActiveMQ\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Alteryx Designer",
+              "plain": "Alteryx Designer\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Chartlab",
+              "plain": "Chartlab\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "collectd",
+              "plain": "collectd\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Graphite",
+              "plain": "Graphite \n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "IBM Tivoli Monitoring",
+              "plain": "IBM Tivoli Monitoring\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "MatLab",
+              "plain": "MatLab\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "scollector",
+              "plain": "scollector\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "stata",
+              "plain": "stata\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "statsD",
+              "plain": "statsD\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Tableau",
+              "plain": "Tableau\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "tcollector",
+              "plain": "tcollector\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Client Libraries": {
+      "plain": "- Java\n- Python\n- R\n- PHP\n- Ruby\n- Node.js\n- Go\n- ODBC\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "Java",
+              "plain": "Java\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Python",
+              "plain": "Python\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "R",
+              "plain": "R\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "PHP",
+              "plain": "PHP\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Ruby",
+              "plain": "Ruby\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Node.js",
+              "plain": "Node.js\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Go",
+              "plain": "Go\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "ODBC",
+              "plain": "ODBC\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Extensibility": {
+      "plain": "- Plugins\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "Plugins",
+              "plain": "Plugins\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "License": {
+      "plain": "- ATSD Community Edition Software License\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "ATSD Community Edition Software License",
+              "plain": "ATSD Community Edition Software License\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Stable Version": {
+      "plain": "- Stable Version\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "Stable Version",
+              "plain": "Stable Version\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    }
+  },
+  {
     "tag": "Blueflood - http://blueflood.io/",
     "descr": "",
     "Clusterability Features": {
@@ -208,6 +772,193 @@
             {
               "content": "Apache 2.0",
               "plain": "Apache 2.0\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "tag": "DalmatinerDB - https://github.com/dalmatinerdb/dalmatinerdb",
+    "descr": "",
+    "Functions": {
+      "plain": "- INS\n- READ\n- SCAN\n- AVG\n- SUM\n- CNT\n- MAX\n- MIN\n- DEL\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "INS",
+              "plain": "INS\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "READ",
+              "plain": "READ\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "SCAN",
+              "plain": "SCAN\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "AVG",
+              "plain": "AVG\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "SUM",
+              "plain": "SUM\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "CNT",
+              "plain": "CNT\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "MAX",
+              "plain": "MAX\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "MIN",
+              "plain": "MIN\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "DEL",
+              "plain": "DEL\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Smallest Sampling Interval": {
+      "plain": "- 1 ms\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "1 ms",
+              "plain": "1 ms\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Smalles Storage Granularity": {
+      "plain": "- 1 ms\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "1 ms",
+              "plain": "1 ms\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Smalles Guaranteed Storage Granularity": {
+      "plain": "- 1 ms\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "1 ms",
+              "plain": "1 ms\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "APIs/Interfaces": {
+      "plain": "- CLI\n- HTTP GUI\n- JSON\n- OpenTSDB\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "CLI",
+              "plain": "CLI\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "HTTP GUI",
+              "plain": "HTTP GUI\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "JSON",
+              "plain": "JSON\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "OpenTSDB",
+              "plain": "OpenTSDB\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Client Libraries": {
+      "plain": "- Erlang\n- Scala\n- Node.js\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "Erlang",
+              "plain": "Erlang\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Scala",
+              "plain": "Scala\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Node.js",
+              "plain": "Node.js\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "License": {
+      "plain": "- MIT\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "MIT",
+              "plain": "MIT\n",
               "plainChilds": "",
               "childs": []
             }
@@ -840,6 +1591,525 @@
     }
   },
   {
+    "tag": "Gnocchi - http://gnocchi.xyz/",
+    "descr": "",
+    "Clusterability Features": {
+      "plain": "- High Availability\n- Scalability\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "High Availability",
+              "plain": "High Availability\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Scalability",
+              "plain": "Scalability\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Functions": {
+      "plain": "- INS\n- READ\n- SCAN\n- AVG\n- SUM\n- CNT\n- MAX\n- MIN\n- UPD\n- DEL\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "INS",
+              "plain": "INS\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "READ",
+              "plain": "READ\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "SCAN",
+              "plain": "SCAN\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "AVG",
+              "plain": "AVG\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "SUM",
+              "plain": "SUM\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "CNT",
+              "plain": "CNT\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "MAX",
+              "plain": "MAX\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "MIN",
+              "plain": "MIN\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "UPD",
+              "plain": "UPD\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "DEL",
+              "plain": "DEL\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Advanced Functions": {
+      "plain": "- Long-term Storage\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "Long-term Storage",
+              "plain": "Long-term Storage\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Smallest Sampling Interval": {
+      "plain": "- 1 s\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "1 s",
+              "plain": "1 s\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Smalles Storage Granularity": {
+      "plain": "- 1 s\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "1 s",
+              "plain": "1 s\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Smalles Guaranteed Storage Granularity": {
+      "plain": "- 1 s\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "1 s",
+              "plain": "1 s\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "APIs/Interfaces": {
+      "plain": "- CLI\n- REST\n- statsD\n\t- incomplete\n- Collectd\n- Grafana\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "CLI",
+              "plain": "CLI\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "REST",
+              "plain": "REST\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "statsD",
+              "plain": "statsD\n",
+              "plainChilds": "\t- incomplete\n",
+              "childs": [
+                {
+                  "content": "incomplete",
+                  "plain": "incomplete\n",
+                  "plainChilds": "",
+                  "childs": []
+                }
+              ]
+            },
+            {
+              "content": "Collectd",
+              "plain": "Collectd\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Grafana",
+              "plain": "Grafana\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Client Libraries": {
+      "plain": "- Python\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "Python",
+              "plain": "Python\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Extensibility": {
+      "plain": "- Plugins\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "Plugins",
+              "plain": "Plugins\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "License": {
+      "plain": "- Apache 2.0\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "Apache 2.0",
+              "plain": "Apache 2.0\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Stable Version": {
+      "plain": "- Stable Version\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "Stable Version",
+              "plain": "Stable Version\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "tag": "Graphite - http://graphite.readthedocs.io/en/latest/",
+    "descr": "",
+    "Clusterability Features": {
+      "plain": "- High Availability\n- Scalability\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "High Availability",
+              "plain": "High Availability\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Scalability",
+              "plain": "Scalability\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Functions": {
+      "plain": "- INS\n- READ\n- SCAN\n- AVG\n- SUM\n- MAX\n- MIN\n- DEL\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "INS",
+              "plain": "INS\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "READ",
+              "plain": "READ\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "SCAN",
+              "plain": "SCAN\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "AVG",
+              "plain": "AVG\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "SUM",
+              "plain": "SUM\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "MAX",
+              "plain": "MAX\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "MIN",
+              "plain": "MIN\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "DEL",
+              "plain": "DEL\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Advanced Functions": {
+      "plain": "- Tags\n- Long-term Storage\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "Tags",
+              "plain": "Tags\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Long-term Storage",
+              "plain": "Long-term Storage\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Smallest Sampling Interval": {
+      "plain": "- 1 s\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "1 s",
+              "plain": "1 s\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Smalles Storage Granularity": {
+      "plain": "- 1 s\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "1 s",
+              "plain": "1 s\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Smalles Guaranteed Storage Granularity": {
+      "plain": "- 1 s\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "1 s",
+              "plain": "1 s\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "APIs/Interfaces": {
+      "plain": "- HTTP GUI\n- HTTP\n- JSON\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "HTTP GUI",
+              "plain": "HTTP GUI\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "HTTP",
+              "plain": "HTTP\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "JSON",
+              "plain": "JSON\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Client Libraries": {
+      "plain": "- Cubism.js\n- Graphitejs\n- Scales\n- Structured Metrics\n- txCarbonClient\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "Cubism.js",
+              "plain": "Cubism.js\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Graphitejs",
+              "plain": "Graphitejs\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Scales",
+              "plain": "Scales\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Structured Metrics",
+              "plain": "Structured Metrics\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "txCarbonClient",
+              "plain": "txCarbonClient\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Extensibility": {
+      "plain": "- Plugins\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "Plugins",
+              "plain": "Plugins\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "License": {
+      "plain": "- Apache 2.0\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "Apache 2.0",
+              "plain": "Apache 2.0\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Stable Version": {
+      "plain": "- Stable Version\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "Stable Version",
+              "plain": "Stable Version\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    }
+  },
+  {
     "tag": "InfluxDB - https://www.influxdata.com/",
     "descr": "",
     "Clusterability Features": {
@@ -1118,6 +2388,259 @@
     },
     "Commercial Support": {
       "plain": "- Commercial Support\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "Commercial Support",
+              "plain": "Commercial Support\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "tag": "KDB+ - https://kx.com/discover/#time-series-database",
+    "descr": "",
+    "Clusterability Features": {
+      "plain": "- High Availability\n- Scalability\n- Load Balancer\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "High Availability",
+              "plain": "High Availability\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Scalability",
+              "plain": "Scalability\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Load Balancer",
+              "plain": "Load Balancer\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Functions": {
+      "plain": "- INS\n- READ\n- SCAN\n- AVG\n- SUM\n- CNT\n- MAX\n- MIN\n- UPD\n- DEL\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "INS",
+              "plain": "INS\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "READ",
+              "plain": "READ\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "SCAN",
+              "plain": "SCAN\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "AVG",
+              "plain": "AVG\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "SUM",
+              "plain": "SUM\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "CNT",
+              "plain": "CNT\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "MAX",
+              "plain": "MAX\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "MIN",
+              "plain": "MIN\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "UPD",
+              "plain": "UPD\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "DEL",
+              "plain": "DEL\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Advanced Functions": {
+      "plain": "- Continuous Calculation\n- Long-term Storage\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "Continuous Calculation",
+              "plain": "Continuous Calculation\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Long-term Storage",
+              "plain": "Long-term Storage\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Smallest Sampling Interval": {
+      "plain": "- 1 ns\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "1 ns",
+              "plain": "1 ns\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Smalles Storage Granularity": {
+      "plain": "- 1 ns\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "1 ns",
+              "plain": "1 ns\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Smalles Guaranteed Storage Granularity": {
+      "plain": "- 1 ns\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "1 ns",
+              "plain": "1 ns\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "APIs/Interfaces": {
+      "plain": "- CLI\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "CLI",
+              "plain": "CLI\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Client Libraries": {
+      "plain": "- Java\n- Python\n- R\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "Java",
+              "plain": "Java\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Python",
+              "plain": "Python\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "R",
+              "plain": "R\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "License": {
+      "plain": "- Apache 2.0\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "Apache 2.0",
+              "plain": "Apache 2.0\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Stable Version": {
+      "plain": "- Stable Version\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "Stable Version",
+              "plain": "Stable Version\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Commercial Support": {
+      "plain": "-  Commercial Support\n",
       "childs": {
         "0": [
           [
@@ -3050,6 +4573,319 @@
     }
   },
   {
+    "tag": "Redis - https://redis.io/",
+    "descr": "",
+    "Clusterability Features": {
+      "plain": "- High Availability\n- Scalability\n- Load Balancing\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "High Availability",
+              "plain": "High Availability\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Scalability",
+              "plain": "Scalability\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Load Balancing",
+              "plain": "Load Balancing\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Functions": {
+      "plain": "- INS\n- READ\n- SCAN\n- DEL\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "INS",
+              "plain": "INS\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "READ",
+              "plain": "READ\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "SCAN",
+              "plain": "SCAN\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "DEL",
+              "plain": "DEL\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Advanced Functions": {
+      "plain": "- Tags\n- Long-term Storage\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "Tags",
+              "plain": "Tags\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Long-term Storage",
+              "plain": "Long-term Storage\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Smallest Sampling Interval": {
+      "plain": "- 1 ms\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "1 ms",
+              "plain": "1 ms\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Smalles Storage Granularity": {
+      "plain": "- 1 ms\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "1 ms",
+              "plain": "1 ms\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Smalles Guaranteed Storage Granularity": {
+      "plain": "- 1 ms\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "1 ms",
+              "plain": "1 ms\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "APIs/Interfaces": {
+      "plain": "- CLI\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "CLI",
+              "plain": "CLI\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Client Libraries": {
+      "plain": "- C\n- C#\n- C++\n- Clojure\n- Erlang\n- Go\n- Haskell\n- Java\n- Lua\n- Matlab\n- Node.js\n- Pascal\n- Perl\n- PHP\n- Python\n- R \n- Ruby\n- Scala\n- Swift\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "C",
+              "plain": "C\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "C#",
+              "plain": "C#\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "C++",
+              "plain": "C++\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Clojure",
+              "plain": "Clojure\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Erlang",
+              "plain": "Erlang\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Go",
+              "plain": "Go\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Haskell",
+              "plain": "Haskell\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Java",
+              "plain": "Java\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Lua",
+              "plain": "Lua\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Matlab",
+              "plain": "Matlab\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Node.js",
+              "plain": "Node.js\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Pascal",
+              "plain": "Pascal\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Perl",
+              "plain": "Perl\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "PHP",
+              "plain": "PHP\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Python",
+              "plain": "Python\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "R",
+              "plain": "R \n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Ruby",
+              "plain": "Ruby\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Scala",
+              "plain": "Scala\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Swift",
+              "plain": "Swift\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Extensibility": {
+      "plain": "- Plugins\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "Plugins",
+              "plain": "Plugins\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "License": {
+      "plain": "- BSD-3-Clause\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "BSD-3-Clause",
+              "plain": "BSD-3-Clause\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Stable Version": {
+      "plain": "- Stable Version\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "Stable Version",
+              "plain": "Stable Version\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    }
+  },
+  {
     "tag": "Rhombus - https://github.com/Pardot/Rhombus",
     "descr": "",
     "Clusterability Features": {
@@ -3244,6 +5080,1282 @@
       "childs": {
         "0": [
           ""
+        ]
+      }
+    }
+  },
+  {
+    "tag": "RiakTS - http://docs.basho.com/riak/ts/1.5.2/",
+    "descr": "",
+    "Clusterability Features": {
+      "plain": "- High Availability\n- Scalability\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "High Availability",
+              "plain": "High Availability\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Scalability",
+              "plain": "Scalability\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Functions": {
+      "plain": "- INS\n- READ\n- SCAN\n- AVG\n- SUM\n- CNT\n- MAX\n- MIN\n- DEL\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "INS",
+              "plain": "INS\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "READ",
+              "plain": "READ\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "SCAN",
+              "plain": "SCAN\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "AVG",
+              "plain": "AVG\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "SUM",
+              "plain": "SUM\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "CNT",
+              "plain": "CNT\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "MAX",
+              "plain": "MAX\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "MIN",
+              "plain": "MIN\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "DEL",
+              "plain": "DEL\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Smallest Sampling Interval": {
+      "plain": "- 1 ms\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "1 ms",
+              "plain": "1 ms\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Smalles Storage Granularity": {
+      "plain": "- 1 ms\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "1 ms",
+              "plain": "1 ms\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Smalles Guaranteed Storage Granularity": {
+      "plain": "- 1 ms\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "1 ms",
+              "plain": "1 ms\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "APIs/Interfaces": {
+      "plain": "- CLI\n- HTTP\n- REST\n- JSON\n- Spark\n- Redis\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "CLI",
+              "plain": "CLI\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "HTTP",
+              "plain": "HTTP\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "REST",
+              "plain": "REST\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "JSON",
+              "plain": "JSON\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Spark",
+              "plain": "Spark\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Redis",
+              "plain": "Redis\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Client Libraries": {
+      "plain": "- C#\n- Java\n- Python\n- PHP\n- Ruby\n- Node.js\n- Go\n- Erlang\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "C#",
+              "plain": "C#\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Java",
+              "plain": "Java\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Python",
+              "plain": "Python\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "PHP",
+              "plain": "PHP\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Ruby",
+              "plain": "Ruby\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Node.js",
+              "plain": "Node.js\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Go",
+              "plain": "Go\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Erlang",
+              "plain": "Erlang\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Extensibility": {
+      "plain": "- Plugins\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "Plugins",
+              "plain": "Plugins\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "License": {
+      "plain": "- Apache 2.0\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "Apache 2.0",
+              "plain": "Apache 2.0\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Stable Version": {
+      "plain": "- Stable Version\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "Stable Version",
+              "plain": "Stable Version\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Commercial Support": {
+      "plain": "-  Commercial Support\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "Commercial Support",
+              "plain": "Commercial Support\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "tag": "Template - htttp://www.example.com",
+    "descr": "",
+    "Clusterability Features": {
+      "plain": "- High Availability\n- Scalability\n- Load Balancing\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "High Availability",
+              "plain": "High Availability\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Scalability",
+              "plain": "Scalability\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Load Balancing",
+              "plain": "Load Balancing\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Functions": {
+      "plain": "- INS\n- READ\n- SCAN\n- AVG\n- SUM\n- CNT\n- MAX\n- MIN\n- UPD\n- DEL\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "INS",
+              "plain": "INS\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "READ",
+              "plain": "READ\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "SCAN",
+              "plain": "SCAN\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "AVG",
+              "plain": "AVG\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "SUM",
+              "plain": "SUM\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "CNT",
+              "plain": "CNT\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "MAX",
+              "plain": "MAX\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "MIN",
+              "plain": "MIN\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "UPD",
+              "plain": "UPD\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "DEL",
+              "plain": "DEL\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Advanced Functions": {
+      "plain": "- Long-term Storage\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "Long-term Storage",
+              "plain": "Long-term Storage\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Smallest Sampling Interval": {
+      "plain": "- 1 ms\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "1 ms",
+              "plain": "1 ms\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Smalles Storage Granularity": {
+      "plain": "- 1 ms\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "1 ms",
+              "plain": "1 ms\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Smalles Guaranteed Storage Granularity": {
+      "plain": "- 1 ms\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "1 ms",
+              "plain": "1 ms\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "APIs/Interfaces": {
+      "plain": "- CLI\n- HTTP GUI\n- REST\n- Spark\n- Collectd\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "CLI",
+              "plain": "CLI\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "HTTP GUI",
+              "plain": "HTTP GUI\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "REST",
+              "plain": "REST\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Spark",
+              "plain": "Spark\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Collectd",
+              "plain": "Collectd\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Client Libraries": {
+      "plain": "- Java\n- Python\n- C#\n- PHP\n- Ruby\n- Node.js\n- Go\n- C++\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "Java",
+              "plain": "Java\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Python",
+              "plain": "Python\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "C#",
+              "plain": "C#\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "PHP",
+              "plain": "PHP\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Ruby",
+              "plain": "Ruby\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Node.js",
+              "plain": "Node.js\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Go",
+              "plain": "Go\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "C++",
+              "plain": "C++\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Extensibility": {
+      "plain": "- Plugins\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "Plugins",
+              "plain": "Plugins\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "License": {
+      "plain": "- GNU Affero General Public License v3.0\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "GNU Affero General Public License v3.0",
+              "plain": "GNU Affero General Public License v3.0\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Stable Version": {
+      "plain": "- Stable Version\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "Stable Version",
+              "plain": "Stable Version\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Commercial Support": {
+      "plain": "-  Commercial Support\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "Commercial Support",
+              "plain": "Commercial Support\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "tag": "Seriesly - https://github.com/dustin/seriesly",
+    "descr": "",
+    "Functions": {
+      "plain": "- INS\n- READ\n- SCAN\n- AVG\n- SUM\n- CNT\n- MAX\n- MIN\n- DEL\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "INS",
+              "plain": "INS\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "READ",
+              "plain": "READ\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "SCAN",
+              "plain": "SCAN\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "AVG",
+              "plain": "AVG\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "SUM",
+              "plain": "SUM\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "CNT",
+              "plain": "CNT\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "MAX",
+              "plain": "MAX\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "MIN",
+              "plain": "MIN\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "DEL",
+              "plain": "DEL\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Smallest Sampling Interval": {
+      "plain": "- 1 ns\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "1 ns",
+              "plain": "1 ns\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Smalles Storage Granularity": {
+      "plain": "- 1 ns\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "1 ns",
+              "plain": "1 ns\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Smalles Guaranteed Storage Granularity": {
+      "plain": "- 1 ns\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "1 ns",
+              "plain": "1 ns\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "APIs/Interfaces": {
+      "plain": "- CLI\n- HTTP\n- JSON\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "CLI",
+              "plain": "CLI\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "HTTP",
+              "plain": "HTTP\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "JSON",
+              "plain": "JSON\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "License": {
+      "plain": "- MIT\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "MIT",
+              "plain": "MIT\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "tag": "Template - htttp://www.example.com",
+    "descr": "",
+    "Clusterability Features": {
+      "plain": "- High Availability\n- Scalability\n- Load Balancing\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "High Availability",
+              "plain": "High Availability\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Scalability",
+              "plain": "Scalability\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Load Balancing",
+              "plain": "Load Balancing\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Functions": {
+      "plain": "- INS\n- READ\n- SCAN\n- AVG\n- SUM\n- CNT\n- MAX\n- MIN\n- UPD\n- DEL\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "INS",
+              "plain": "INS\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "READ",
+              "plain": "READ\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "SCAN",
+              "plain": "SCAN\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "AVG",
+              "plain": "AVG\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "SUM",
+              "plain": "SUM\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "CNT",
+              "plain": "CNT\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "MAX",
+              "plain": "MAX\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "MIN",
+              "plain": "MIN\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "UPD",
+              "plain": "UPD\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "DEL",
+              "plain": "DEL\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Advanced Functions": {
+      "plain": "- Contiunous Calculation\n- Tags\n- Long-term Storage\n- Matrix Time Series\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "Contiunous Calculation",
+              "plain": "Contiunous Calculation\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Tags",
+              "plain": "Tags\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Long-term Storage",
+              "plain": "Long-term Storage\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Matrix Time Series",
+              "plain": "Matrix Time Series\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Sampling": {
+      "plain": "- Downsampling\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "Downsampling",
+              "plain": "Downsampling\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Smallest Sampling Interval": {
+      "plain": "- 1 ms\n- 2 ms\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "1 ms",
+              "plain": "1 ms\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "2 ms",
+              "plain": "2 ms\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Smalles Storage Granularity": {
+      "plain": "- 1 ms\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "1 ms",
+              "plain": "1 ms\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Smalles Guaranteed Storage Granularity": {
+      "plain": "- 1 ms\n- > 1 ms\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "1 ms",
+              "plain": "1 ms\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": ",[> 1 ms\n]",
+              "plain": "> 1 ms\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "APIs/Interfaces": {
+      "plain": "- CLI\n- HTTP GUI\n- REST\n- HTTP\n- JSON\n- Kafka\n- statsD\n- UDP\n- Telnet\n- Azure\n- RabbitMQ\n- S3\n- Spritzer\n- Spark\n- Storm\n- Collectd\n- OpenTSDB\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "CLI",
+              "plain": "CLI\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "HTTP GUI",
+              "plain": "HTTP GUI\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "REST",
+              "plain": "REST\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "HTTP",
+              "plain": "HTTP\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "JSON",
+              "plain": "JSON\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Kafka",
+              "plain": "Kafka\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "statsD",
+              "plain": "statsD\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "UDP",
+              "plain": "UDP\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Telnet",
+              "plain": "Telnet\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Azure",
+              "plain": "Azure\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "RabbitMQ",
+              "plain": "RabbitMQ\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "S3",
+              "plain": "S3\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Spritzer",
+              "plain": "Spritzer\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Spark",
+              "plain": "Spark\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Storm",
+              "plain": "Storm\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Collectd",
+              "plain": "Collectd\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "OpenTSDB",
+              "plain": "OpenTSDB\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Client Libraries": {
+      "plain": "- Java\n- Python\n- R\n- Groovy\n- .NET\n- Perl\n- PHP\n- Ruby\n- C\n- Node.js\n- ODBC\n- Go\n- J\n- C++\n- Tcl\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "Java",
+              "plain": "Java\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Python",
+              "plain": "Python\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "R",
+              "plain": "R\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Groovy",
+              "plain": "Groovy\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": ".NET",
+              "plain": ".NET\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Perl",
+              "plain": "Perl\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "PHP",
+              "plain": "PHP\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Ruby",
+              "plain": "Ruby\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "C",
+              "plain": "C\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Node.js",
+              "plain": "Node.js\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "ODBC",
+              "plain": "ODBC\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Go",
+              "plain": "Go\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "J",
+              "plain": "J\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "C++",
+              "plain": "C++\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Tcl",
+              "plain": "Tcl\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Extensibility": {
+      "plain": "- Plugins\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "Plugins",
+              "plain": "Plugins\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "License": {
+      "plain": "- Apache 2.0\n- LGPLv2.1+\n- GPLv3+\n- MIT\n- MonetDB Public\n- GPLv2\n- PostgresSQL\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "Apache 2.0",
+              "plain": "Apache 2.0\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "LGPLv2.1+",
+              "plain": "LGPLv2.1+\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "GPLv3+",
+              "plain": "GPLv3+\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "MIT",
+              "plain": "MIT\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "MonetDB Public",
+              "plain": "MonetDB Public\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "GPLv2",
+              "plain": "GPLv2\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "PostgresSQL",
+              "plain": "PostgresSQL\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Stable Version": {
+      "plain": "- Stable Version\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "Stable Version",
+              "plain": "Stable Version\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Commercial Support": {
+      "plain": "-  Commercial Support\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "Commercial Support",
+              "plain": "Commercial Support\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
         ]
       }
     }
