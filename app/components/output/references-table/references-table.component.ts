@@ -1,5 +1,5 @@
-import { Component, Input, ChangeDetectionStrategy } from "@angular/core";
-import { ComparisonCitationService } from "./../../comparison/components/comparison-citation.service";
+import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
+import { ComparisonCitationService } from './../../comparison/components/comparison-citation.service';
 
 @Component({
     selector: 'referencestable',
@@ -9,5 +9,5 @@ import { ComparisonCitationService } from "./../../comparison/components/compari
 })
 export class ReferencesTableComponent {
     @Input() citationServ: ComparisonCitationService;
-    @Input() changeNum: number = 0;
+    @Input() changeNum = 0;
 }

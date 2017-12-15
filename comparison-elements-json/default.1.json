@@ -1,0 +1,127 @@
+{
+  "tag": "Default 1 - http://default-1-entry.example.com",
+  "descr": "slow, MIT, red 1, grey",
+  "Performance": {
+    "plain": "- slow\n    - [@Bry07towardsformal]\n",
+    "childs": {
+      "0": [
+        [
+          {
+            "content": "slow",
+            "plain": "slow\n",
+            "plainChilds": "    - [@Bry07towardsformal]\n",
+            "childs": [
+              {
+                "content": ",[@Bry07towardsformal]",
+                "plain": "[@Bry07towardsformal]\n",
+                "plainChilds": "",
+                "childs": []
+              }
+            ]
+          }
+        ]
+      ]
+    }
+  },
+  "License": {
+    "plain": "- MIT\n",
+    "childs": {
+      "0": [
+        [
+          {
+            "content": "MIT",
+            "plain": "MIT\n",
+            "plainChilds": "",
+            "childs": []
+          }
+        ]
+      ]
+    }
+  },
+  "Showcase 2.0": {
+    "plain": "- red 1\n- grey\n",
+    "childs": {
+      "0": [
+        [
+          {
+            "content": "red 1",
+            "plain": "red 1\n",
+            "plainChilds": "",
+            "childs": []
+          },
+          {
+            "content": "grey",
+            "plain": "grey\n",
+            "plainChilds": "",
+            "childs": []
+          }
+        ]
+      ]
+    }
+  },
+  "Description": {
+    "plain": "Default long description in __markdown__.",
+    "childs": {
+      "0": [
+        "Default long description in __markdown__."
+      ]
+    }
+  },
+  "Uncolored": {
+    "plain": "- color 1\n- color 2\n",
+    "childs": {
+      "0": [
+        [
+          {
+            "content": "color 1",
+            "plain": "color 1\n",
+            "plainChilds": "",
+            "childs": []
+          },
+          {
+            "content": "color 2",
+            "plain": "color 2\n",
+            "plainChilds": "",
+            "childs": []
+          }
+        ]
+      ]
+    }
+  },
+  "Repo": {
+    "plain": "- https://github.com/ultimate-comparisons/ultimate-comparison-BASE\n",
+    "childs": {
+      "0": [
+        [
+          {
+            "content": "https://github.com/ultimate-comparisons/ultimate-comparison-BASE",
+            "plain": "https://github.com/ultimate-comparisons/ultimate-comparison-BASE\n",
+            "plainChilds": "",
+            "childs": []
+          }
+        ]
+      ]
+    }
+  },
+  "NumberColumn": {
+    "plain": "- 200\n- 199\n",
+    "childs": {
+      "0": [
+        [
+          {
+            "content": "200",
+            "plain": "200\n",
+            "plainChilds": "",
+            "childs": []
+          },
+          {
+            "content": "199",
+            "plain": "199\n",
+            "plainChilds": "",
+            "childs": []
+          }
+        ]
+      ]
+    }
+  }
+}

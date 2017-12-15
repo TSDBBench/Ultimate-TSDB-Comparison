@@ -1,4 +1,4 @@
-import { Component, Input, ChangeDetectionStrategy } from "@angular/core";
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
     selector: 'pcard',
@@ -8,4 +8,12 @@ import { Component, Input, ChangeDetectionStrategy } from "@angular/core";
 })
 export class PaperCardComponent {
     @Input() heading: string;
+    @Input() symbol = false;
+    @Output() shrinkExpandEmitter: EventEmitter<any> = new EventEmitter();
+    public shrinked = false;
+
+    public shrinkExpand() {
+        this.shrinked = !this.shrinked;
+        this.shrinkExpandEmitter.emit();
+    }
 }

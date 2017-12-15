@@ -1,5 +1,5 @@
 :host {
-    display: block;
+    display: grid;
     padding: 0;
 }
 
@@ -12,12 +12,8 @@
 }
 
 .card-content {
-    padding: 0 16 16 16;
+    padding: 0 16px 16px 16px;
     position: relative;
-}
-
-pcard /deep/ .paper-header {
-    font-size: 18px;
 }
 
 .tooltip-text {
@@ -26,4 +22,30 @@ pcard /deep/ .paper-header {
 
 .tooltip-text /deep/ ul {
     padding-left: 15px;
+}
+
+.pheader h2 {
+    margin-top: 0;
+}
+
+.description {
+    grid-column: span 1;
+}
+
+.grid-content {
+    display: grid;
+    grid-template-columns: auto;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    grid-auto-flow: row;
+}
+
+@media only screen and (min-width: 400px) {
+    .description {
+        grid-column: span 2;
+    }
+
+    .grid-content {
+        grid-template-columns: auto auto;
+    }
 }

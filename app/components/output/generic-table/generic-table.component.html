@@ -2,7 +2,7 @@
     <thead style="background-color: white;">
     <tr>
         <template ngFor let-column [ngForOf]="columns | tablefilter">
-            <th valign=column.valign style=column.style name=column.tag>
+            <th>
                 <button (click)="orderClick($event, column.tag)">{{column.name}}
                     <iicon icon="keyboard-arrow-up" *ngIf="displayOrder(column.tag, -1)"></iicon>
                     <iicon icon="keyboard-arrow-down" *ngIf="displayOrder(column.tag, 1)"></iicon>
@@ -18,24 +18,45 @@
     <template ngFor let-dat [ngForOf]="data | orderBy: [order,orderOption] | datafilter: [query, displayTemplate]">
         <tr *ngIf="shouldBeShown(dat)">
             <template ngFor let-column [ngForOf]="columns | tablefilter">
-                <td *ngIf="column.type?.tag==='url'"><a class="anchored" href="{{dat.getProperty(column.url).text}}" target="_blank">{{dat.getProperty(column.tag).text}}</a>
+                <td *ngIf="column.type?.tag==='url'">
+                    <a *ngIf="isUrl(dat.getProperty(column.url).text)" class="anchored" href="{{dat.getProperty(column.url).text}}" target="_blank">{{dat.getProperty(column.tag).text}}</a>
+                    <div *ngIf="!isUrl(dat.getProperty(column.url).text)" class="anchored">{{dat.getProperty(column.tag).text}}</div>
                 </td>
                 <td *ngIf="column.type?.tag==='text'">
                     <div [innerHtml]="dat.getProperty(column.tag).text|citation: [citationServ] | sanitizeHtml"></div>
                 </td>
-                <td *ngIf="column.type?.tag==='label'">
+                <td *ngIf="column.type?.tag==='label' && !column.repo">
                     <template ngFor let-sitem [ngForOf]="dat.getPropertyListItems(column.tag)"
                               *ngIf="column.type?.labelCls">
-                        <ptooltip [tooltip]="column.values[sitem.content]"
+                        <ptooltip [tooltip]="column.values[sitem.content].tag"
                                   [tooltipHtml]="sitem.htmlChilds | citation: [citationServ]" [position]="'n'">
-                            <div *ngIf="(column.type.colors | json) == '{}'" class="{{column.type.getCls(sitem.content)}} {{column.type.labelCls.getCls(sitem.content)}} mylabel">
-                                {{sitem.content + 'test'}}
+                            <div *ngIf="column.type.colors.isEmpty()" class="{{column.type.getCls(sitem.content)}} {{column.type.labelCls.getCls(sitem.content)}} mylabel" (click)="searchFor(column.tag, sitem.content)">
+                                {{sitem.content}}
                             </div>
-                            <div *ngIf="(column.type.colors | json) != '{}'" [style.background-color]="getColor(column, sitem.content)" class="{{column.type.getCls(sitem.content)}} {{column.type.labelCls.getCls(sitem.content)}} mylabel">
+                            <div *ngIf="!column.type.colors.isEmpty()" [style.color]="getForegroundColor(column, sitem.content)" [style.background-color]="getColor(column, sitem.content)" class="{{column.type.getCls(sitem.content)}} {{column.type.labelCls.getCls(sitem.content)}} mylabel" (click)="searchFor(column.tag, sitem.content)">
                                 {{sitem.content}}
                             </div>
                         </ptooltip>
                     </template>
+                    <ptooltip *ngIf="dat.getPropertyListItems(column.tag).length === 0" [tooltipHtml]="'There was no value for this field. Please submit one via pull request.'">
+                        <div class="label mylabel unknown">unknown</div>
+                    </ptooltip>
+                </td>
+                <td *ngIf="column.type?.tag==='label' && column.repo">
+                    <template ngFor let-sitem [ngForOf]="dat.getRepoLabels(column, cd)?.list"
+                              *ngIf="column.type?.labelCls">
+                        <ptooltip [tooltipHtml]="sitem.htmlChilds" [position]="'n'">
+                            <div *ngIf="column.type.colors.isEmpty()" class="{{column.type.getCls(sitem.content)}} {{column.type.labelCls.getCls(sitem.content)}} mylabel" (click)="searchFor(column.tag, sitem.content)">
+                                {{sitem.content}}
+                            </div> 
+                            <div *ngIf="!column.type.colors.isEmpty()" [style.background-color]="getColor(column, sitem.content)" class="{{column.type.getCls(sitem.content)}} {{column.type.labelCls.getCls(sitem.content)}} mylabel" (click)="searchFor(column.tag, sitem.content)">
+                                {{sitem.content}}
+                            </div>
+                        </ptooltip>
+                    </template>
+                    <ptooltip *ngIf="dat.getRepoLabels(column, cd) === undefined" [tooltipHtml]="'There was no value for this field. Please submit one via pull request.'">
+                        <div class="label mylabel unknown">unknown</div>
+                    </ptooltip>
                 </td>
                 <td *ngIf="column.type?.tag=='rating'">
                     <iicon icon="star" *ngIf="dat.getRating()!=0">{{dat.getRating()}}</iicon>

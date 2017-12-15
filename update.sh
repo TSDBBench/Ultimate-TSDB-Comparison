@@ -2,8 +2,8 @@
 set -o errexit 
 
 main() {
-    echo "test"
-    
+    echo "Start update..."
+
     # Source directory & target branch.
 	deploy_branch=${GIT_UPDATE_BRANCH:-update}
     
@@ -36,7 +36,8 @@ main() {
 	fi
 		
 	previous_branch=`git rev-parse --abbrev-ref HEAD`
-    
+
+    echo "Update previous branch: ${previous_branch}"
     if git ls-remote --exit-code $repo "refs/heads/$deploy_branch" ; then
 		# deploy_branch exists in $repo; make sure we have the latest version
 		
@@ -50,6 +51,8 @@ main() {
 	then incremental_deploy
 	else initial_deploy
 	fi
+
+	update_repos
 }
 
 remove_files(){
@@ -59,6 +62,7 @@ remove_files(){
     git rm --cached README-THING.template.md
     git rm --cached .travis.yml
     git rm --cached id_rsa.enc
+    git rm --cached github_deploy_key.enc
     git rm --cached LICENSE
     git rm --cached citation/acm-siggraph.csl
     git rm --cached citation/default.bib
@@ -124,6 +128,13 @@ disable_expanded_output() {
 		set +o xtrace
 		set -o verbose
 	fi
+}
+
+# run script to update repos
+update_repos () {
+  echo "Start to update repos"
+  npm install --only=dev
+  node update-repos.js ${GITHUB_TOKEN}
 }
 
 main

@@ -1,42 +1,57 @@
-import { TableData, LabelCls, Value, Type } from "../index";
-import { ColorDictionary } from "./color-dictionary";
+import { TableData, LabelCls, Value, Type } from '../index';
+import { ColorDictionary } from './color-dictionary';
+import { isNullOrUndefined } from 'util';
 
 export class TableDataSet {
-    private tableDataSet: {[name: string]: TableData;} = {}
-    private set: Array<TableData> = new Array<TableData>();
-    public ready: boolean = false;
+    private tableDataSet: {[name: string]: TableData;} = {};
+    private set: Array<TableData> = [];
+    public ready = false;
 
-    constructor(jsonObj: any) {
+    constructor() {
+
+    }
+
+    public load(jsonObj: any) {
         jsonObj.forEach(obj => {
-            let lcls: LabelCls = new LabelCls();
-            var values: {[name: string]: string;} = {};
+            const lcls: LabelCls = new LabelCls();
+            const values: any = {};
             if (obj.type.values) {
                 obj.type.values.forEach(val => {
-                    let value: Value = new Value(val.name, val.description);
-                    values[val.name] = val.description;
+                    const value: Value = new Value(val.name, val.description);
+                    if (isNullOrUndefined(val['min-age'])) {
+                        values[val.name] = { tag: val.description, weight: val.weight };
+                    } else {
+                        const v = {};
+                        v['min-age'] = val['min-age'];
+                        v['min-age-unit'] = val['min-age-unit'];
+                        v['max-age'] = val['max-age'];
+                        v['max-age-unit'] = val['max-age-unit'];
+                        v['description'] = val.description;
+                        values[val.name] = v;
+                    }
                     switch (val.class) {
-                        case "label-success":
+                        case 'label-success':
                             lcls.label_success.push(value);
                             break;
-                        case "label-warning":
+                        case 'label-warning':
                             lcls.label_warning.push(value);
                             break;
-                        case "label-danger":
+                        case 'label-danger':
                             lcls.label_danger.push(value);
                             break;
-                        case "label-default":
+                        case 'label-default':
                             lcls.label_default.push(value);
                             break;
-                        case "label-info":
+                        case 'label-info':
                             lcls.label_info.push(value);
                             break;
-                        case "label-primary":
+                        case 'label-primary':
                             lcls.label_primary.push(value);
                             break;
                     }
-                })
+                });
             }
-            let colors: ColorDictionary = new ColorDictionary();
+            const colors: ColorDictionary = new ColorDictionary();
             if (obj.type && obj.type.values) {
                 for (const v of obj.type.values) {
                     if (v.color) {
@@ -44,13 +59,26 @@ export class TableDataSet {
                     }
                 }
             }
-            let type: Type = new Type(
+            const foregroundColors: ColorDictionary = new ColorDictionary();
+            if (obj.type && obj.type.values) {
+                for (const v of obj.type.values) {
+                    if (v.foreground) {
+                        foregroundColors.setColor(v.name, v.foreground);
+                    }
+                }
+            }
+            const type: Type = new Type(
                 obj.type.tag,
                 obj.type.class,
                 lcls,
-                colors
-            )
-            let td: TableData = new TableData(
+                colors,
+                foregroundColors
+            );
+            let order = obj.order;
+            if (!isNullOrUndefined(order)) {
+                order = order.toLowerCase();
+            }
+            const td: TableData = new TableData(
                 obj.name,
                 obj.tag,
                 obj.urlTag,
@@ -58,26 +86,38 @@ export class TableDataSet {
                 obj.display,
                 type,
                 values,
-                obj.sort
-            )
+                obj.sort,
+                obj.repo,
+                order
+            );
             this.tableDataSet[obj.tag] = td;
-        })
+        });
         this.ready = true;
     }
 
     public getTableData(tag: string): TableData {
+        if (!this.ready) {
+            return new TableData();
+        }
         return this.tableDataSet[tag] ? this.tableDataSet[tag] : new TableData();
     }
 
     public getTableDataArray(): Array<TableData> {
-        let size: number = 0;
-        for (let key in this.tableDataSet) {
-            if (!this.tableDataSet.hasOwnProperty(key)) continue;
+        if (!this.ready) {
+            return [];
+        }
+        let size = 0;
+        for (const key in this.tableDataSet) {
+            if (!this.tableDataSet.hasOwnProperty(key)) {
+                continue;
+            }
             size++;
         }
-        if (this.set.length != size) {
-            for (let key in this.tableDataSet) {
-                if (!this.tableDataSet.hasOwnProperty(key)) continue;
+        if (this.set.length !== size) {
+            for (const key in this.tableDataSet) {
+                if (!this.tableDataSet.hasOwnProperty(key)) {
+                    continue;
+                }
                 this.set.push(this.tableDataSet[key]);
             }
         }

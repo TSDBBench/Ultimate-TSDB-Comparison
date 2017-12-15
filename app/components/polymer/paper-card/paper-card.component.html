@@ -1,2 +1,11 @@
 <div class="paper-header" *ngIf="heading">{{heading}}</div>
-<ng-content></ng-content>
+<div class="paper-symbol" *ngIf="symbol">
+    <iicon #ExpandId icon="resize-full" class="shrink-expand" (click)="shrinkExpand()"
+           *ngIf="comparisonComponent?.shrinked"></iicon>
+    <iicon #shrinkId icon="resize-small" class="shrink-expand" (click)="shrinkExpand()"
+           *ngIf="!comparisonComponent?.shrinked"></iicon>
+</div>
+
+<div class="paper-content">
+    <ng-content></ng-content>
+</div>

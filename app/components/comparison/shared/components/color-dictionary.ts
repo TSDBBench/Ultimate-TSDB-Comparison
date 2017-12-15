@@ -9,7 +9,11 @@ export class ColorDictionary {
         if (this.colorDict[label]) {
             return this.colorDict[label];
         } else {
-            return "";
+            return '';
         }
+    }
+
+    public isEmpty(): boolean {
+        return Object.keys(this.colorDict).length === 0;
     }
 }

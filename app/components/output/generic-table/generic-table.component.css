@@ -2,9 +2,13 @@
     display: block;
 }
 
-table {
-    min-width: 600px;
-    margin-bottom: 0px;
+.grid-table {
+    display: grid;
+    grid-template-columns: auto;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    grid-auto-flow: column;
+
 }
 
 .mylabel {
@@ -15,11 +19,20 @@ table {
     white-space: inherit;
 }
 
+.label-unknown {
+    color: black;
+    border: solid black 1px;
+}
+
 th > button {
     border: none;
     padding: 0;
     outline: none;
-    background-color: inherit;
+    background-color: white;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0; /* required */
+
 }
 
 table tr {
@@ -35,4 +48,9 @@ table {
     display: block;
     height:48px;
     margin:-48px 0 0;
+}
+
+.unknown {
+    background-color: lightgray;
+    color: white;
 }

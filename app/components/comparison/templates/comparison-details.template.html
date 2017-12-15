@@ -2,7 +2,7 @@
     <h2>{{getHeaderText()}}
         <template ngFor let-sitem [ngForOf]="data?.getPropertyListItems(confServ.comparison?.details.headerLabel)"
                   *ngIf="confServ.comparison">
-            <ptooltip [tooltip]="getHeaderColumn()?.values[sitem.content]"
+            <ptooltip [tooltip]="getHeaderColumn()?.values[sitem.content].tag"
                       [tooltipHtml]="sitem.htmlChilds|citation:[citationServ]" [position]="'s'">
                 <div class="{{getHeaderLabel()?.getCls(sitem.content)}} mylabel">
                     {{sitem.content}}
@@ -12,18 +12,17 @@
         <small><a href="{{getHeaderUrl()}}" target="_blank">{{getHeaderUrl()}}</a></small>
     </h2>
 </div>
-<div class="content" style="padding-left:15px; padding-right: 15px;">
-    <pcard *ngIf="confServ.comparison" heading="{{confServ.comparison?.details.bodyMainTitle}}" style="display:block;">
-        <div class="card-content">
-            <htmlcitationtext [description]="getBody()" [citationServ]="citationServ"
-                              *ngIf="citationServ.check"></htmlcitationtext>
-        </div>
+<div class="grid-content">
+    <pcard *ngIf="confServ.comparison" heading="{{confServ.comparison?.details.bodyMainTitle}}" class="description">
+        <htmlcitationtext [description]="getBody()" [citationServ]="citationServ"
+                          *ngIf="citationServ.check"></htmlcitationtext>
     </pcard>
     <template ngFor let-atag [ngForOf]="confServ.getBodyAttachmentTags()" *ngIf="confServ.comparison">
         <pcard heading="{{getTable(atag).name}}">
             <p class="card-content">
                 <template ngFor let-sitem [ngForOf]="data?.getPropertyListItems(atag)">
-                    <ptooltip *ngIf="!confServ.comparison?.details.tooltipAsText" [tooltip]="getTable(atag)?.values[sitem.content]"
+                    <ptooltip *ngIf="!confServ.comparison?.details.tooltipAsText"
+                              [tooltip]="getTable(atag)?.values[sitem.content]"
                               [tooltipHtml]="sitem.htmlChilds|citation:[citationServ]" [position]="'n'">
                         <span class="{{getTable(atag)?.type?.getCls(sitem.content)}} mylabel">{{sitem.content}}</span>
                     </ptooltip>
@@ -31,7 +30,8 @@
                         <span *ngIf="(this.confServ.tableDataSet.getTableData(atag).type.colors | json).length === 21"
                               class="{{getTable(atag)?.type?.getCls(sitem.content)}} mylabel">{{sitem.content}}</span>
                         <span *ngIf="(this.confServ.tableDataSet.getTableData(atag).type.colors | json).length !== 21"
-                              class="label mylabel" [style.background-color]="this.confServ.tableDataSet.getTableData(atag).type.colors.getColor(sitem.content)">{{sitem.content}}</span>
+                              class="label mylabel"
+                              [style.background-color]="this.confServ.tableDataSet.getTableData(atag).type.colors.getColor(sitem.content)">{{sitem.content}}</span>
                         <span class="tooltip-text">
                         <htmlcitationtext [description]="getTable(atag)?.values[sitem.content]"
                                           [citationServ]="citationServ"

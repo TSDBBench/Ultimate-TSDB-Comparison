@@ -1,0 +1,726 @@
+[
+  {
+    "tag": "Default 1 - http://default-1-entry.example.com",
+    "descr": "slow, MIT, red 1, grey",
+    "Performance": {
+      "plain": "- slow\n    - [@Bry07towardsformal]\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "slow",
+              "plain": "slow\n",
+              "plainChilds": "    - [@Bry07towardsformal]\n",
+              "childs": [
+                {
+                  "content": ",[@Bry07towardsformal]",
+                  "plain": "[@Bry07towardsformal]\n",
+                  "plainChilds": "",
+                  "childs": []
+                }
+              ]
+            }
+          ]
+        ]
+      }
+    },
+    "License": {
+      "plain": "- MIT\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "MIT",
+              "plain": "MIT\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Showcase 2.0": {
+      "plain": "- red 1\n- grey\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "red 1",
+              "plain": "red 1\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "grey",
+              "plain": "grey\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Description": {
+      "plain": "Default long description in __markdown__.",
+      "childs": {
+        "0": [
+          "Default long description in __markdown__."
+        ]
+      }
+    },
+    "Uncolored": {
+      "plain": "- color 1\n- color 2\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "color 1",
+              "plain": "color 1\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "color 2",
+              "plain": "color 2\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Repo": {
+      "plain": "- https://github.com/ultimate-comparisons/ultimate-comparison-BASE\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "https://github.com/ultimate-comparisons/ultimate-comparison-BASE",
+              "plain": "https://github.com/ultimate-comparisons/ultimate-comparison-BASE\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "NumberColumn": {
+      "plain": "- 200\n- 199\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "200",
+              "plain": "200\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "199",
+              "plain": "199\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "tag": "Default 2 - http://default-2-entry.example.com",
+    "descr": "fast, Apache 2.0, red 2, green",
+    "Performance": {
+      "plain": "- fast\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "fast",
+              "plain": "fast\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "License": {
+      "plain": "- Apache 2.0\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "Apache 2.0",
+              "plain": "Apache 2.0\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Showcase 2.0": {
+      "plain": "- red 2\n- green\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "red 2",
+              "plain": "red 2\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "green",
+              "plain": "green\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Description": {
+      "plain": "Default long description in __markdown__.",
+      "childs": {
+        "0": [
+          "Default long description in __markdown__."
+        ]
+      }
+    },
+    "Uncolored": {
+      "plain": "- color 1\n- color 3\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "color 1",
+              "plain": "color 1\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "color 3",
+              "plain": "color 3\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Repo": {
+      "plain": "- https://github.com/ultimate-comparisons/ultimate-deployment-tool-comparison\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "https://github.com/ultimate-comparisons/ultimate-deployment-tool-comparison",
+              "plain": "https://github.com/ultimate-comparisons/ultimate-deployment-tool-comparison\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "NumberColumn": {
+      "plain": "- 300\u0000",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "300",
+              "plain": "300\u0000",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "tag": "Default 3 - http://default-3-entry.example.com",
+    "descr": "fast, MPL 2.0, red 1, red 2, light blue",
+    "Performance": {
+      "plain": "- fast\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "fast",
+              "plain": "fast\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "License": {
+      "plain": "- MPL 2.0\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "MPL 2.0",
+              "plain": "MPL 2.0\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Showcase 2.0": {
+      "plain": "- red 1\n- red 2\n- light blue\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "red 1",
+              "plain": "red 1\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "red 2",
+              "plain": "red 2\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "light blue",
+              "plain": "light blue\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Description": {
+      "plain": "Default long description in __markdown__.",
+      "childs": {
+        "0": [
+          "Default long description in __markdown__."
+        ]
+      }
+    },
+    "Uncolored": {
+      "plain": "- color 2\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "color 2",
+              "plain": "color 2\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Repo": {
+      "plain": "- https://github.com/ultimate-comparisons/ultimate-IoT-platform-comparison\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "https://github.com/ultimate-comparisons/ultimate-IoT-platform-comparison",
+              "plain": "https://github.com/ultimate-comparisons/ultimate-IoT-platform-comparison\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "NumberColumn": {
+      "plain": "- 250\u0000",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "250",
+              "plain": "250\u0000",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "tag": "Default 4 - http://default-4-entry.example.com",
+    "descr": "slow, MIT, green, green, grey",
+    "Performance": {
+      "plain": "- slow\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "slow",
+              "plain": "slow\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "License": {
+      "plain": "- MIT\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "MIT",
+              "plain": "MIT\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Showcase 2.0": {
+      "plain": "- green\n- green\n- grey\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "green",
+              "plain": "green\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "green",
+              "plain": "green\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "grey",
+              "plain": "grey\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Description": {
+      "plain": "Default long description in __markdown__.",
+      "childs": {
+        "0": [
+          "Default long description in __markdown__."
+        ]
+      }
+    },
+    "Uncolored": {
+      "plain": "- color 1\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "color 1",
+              "plain": "color 1\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Repo": {
+      "plain": "- https://github.com/SitOPT/SitOPT-Installation-Script\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "https://github.com/SitOPT/SitOPT-Installation-Script",
+              "plain": "https://github.com/SitOPT/SitOPT-Installation-Script\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "NumberColumn": {
+      "plain": "- 100\u0000",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "100",
+              "plain": "100\u0000",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "tag": "Default 5 - http://default-5-entry.example.com",
+    "descr": "almost everything unknown",
+    "Performance": {
+      "plain": "",
+      "childs": {
+        "0": [
+          ""
+        ]
+      }
+    },
+    "License": {
+      "plain": "",
+      "childs": {
+        "0": [
+          ""
+        ]
+      }
+    },
+    "Showcase 2.0": {
+      "plain": "",
+      "childs": {
+        "0": [
+          ""
+        ]
+      }
+    },
+    "Description": {
+      "plain": "This element has almost no values to test unknown",
+      "childs": {
+        "0": [
+          "This element has almost no values to test unknown"
+        ]
+      }
+    },
+    "Uncolored": {
+      "plain": "",
+      "childs": {
+        "0": [
+          ""
+        ]
+      }
+    },
+    "Repo": {
+      "plain": "",
+      "childs": {
+        "0": [
+          ""
+        ]
+      }
+    },
+    "NumberColumn": {
+      "plain": "",
+      "childs": {
+        "0": [
+          ""
+        ]
+      }
+    }
+  },
+  {
+    "tag": "Template - http://www.example.com",
+    "descr": "Default short description (with bibkey: [@esper-reference])",
+    "Performance": {
+      "plain": "- slow\n- fast\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "slow",
+              "plain": "slow\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "fast",
+              "plain": "fast\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "License": {
+      "plain": "- MIT\n- Apache 2.0\n- MPL 2.0\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "MIT",
+              "plain": "MIT\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Apache 2.0",
+              "plain": "Apache 2.0\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "MPL 2.0",
+              "plain": "MPL 2.0\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Showcase 2.0": {
+      "plain": "- red 1\n- red 2\n- green\n    - [@eckertThesisCEP]\n- yellow\n    - yellow property\n- dark blue\n    - [@eckertThesisCEP]\n    - more properties\n- grey\n- light blue\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "red 1",
+              "plain": "red 1\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "red 2",
+              "plain": "red 2\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "green",
+              "plain": "green\n",
+              "plainChilds": "    - [@eckertThesisCEP]\n",
+              "childs": [
+                {
+                  "content": ",[@eckertThesisCEP]",
+                  "plain": "[@eckertThesisCEP]\n",
+                  "plainChilds": "",
+                  "childs": []
+                }
+              ]
+            },
+            {
+              "content": "yellow",
+              "plain": "yellow\n",
+              "plainChilds": "    - yellow property\n",
+              "childs": [
+                {
+                  "content": "yellow property",
+                  "plain": "yellow property\n",
+                  "plainChilds": "",
+                  "childs": []
+                }
+              ]
+            },
+            {
+              "content": "dark blue",
+              "plain": "dark blue\n",
+              "plainChilds": "    - [@eckertThesisCEP]\n    - more properties\n",
+              "childs": [
+                {
+                  "content": ",[@eckertThesisCEP]",
+                  "plain": "[@eckertThesisCEP]\n    ",
+                  "plainChilds": "",
+                  "childs": []
+                },
+                {
+                  "content": "more properties",
+                  "plain": "more properties\n",
+                  "plainChilds": "",
+                  "childs": []
+                }
+              ]
+            },
+            {
+              "content": "grey",
+              "plain": "grey\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "light blue",
+              "plain": "light blue\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Description": {
+      "plain": "Default long description in __markdown__.\n- Bibkey example [@Adi:2004:ASM:988145.988150]\n- [Link example](http://example.com).",
+      "childs": {
+        "0": [
+          "Default long description in __markdown__. - Bibkey example [@Adi:2004:ASM:988145.988150] - [Link example]."
+        ]
+      }
+    },
+    "Rating": {
+      "plain": "- [5] Template is perfect\n- [1] I don't understand nothing\n- [3] It works\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": ",[5] Template is perfect",
+              "plain": "[5] Template is perfect\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": ",[1] I don't understand nothing",
+              "plain": "[1] I don't understand nothing\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": ",[3] It works",
+              "plain": "[3] It works\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "Uncolored": {
+      "plain": "- color 1\n",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "color 1",
+              "plain": "color 1\n",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    },
+    "NumberColumn": {
+      "plain": "- 200\u0000",
+      "childs": {
+        "0": [
+          [
+            {
+              "content": "200",
+              "plain": "200\u0000",
+              "plainChilds": "",
+              "childs": []
+            }
+          ]
+        ]
+      }
+    }
+  }
+]

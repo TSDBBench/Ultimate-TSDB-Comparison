@@ -1,0 +1,114 @@
+{
+  "tag": "Default 2 - http://default-2-entry.example.com",
+  "descr": "fast, Apache 2.0, red 2, green",
+  "Performance": {
+    "plain": "- fast\n",
+    "childs": {
+      "0": [
+        [
+          {
+            "content": "fast",
+            "plain": "fast\n",
+            "plainChilds": "",
+            "childs": []
+          }
+        ]
+      ]
+    }
+  },
+  "License": {
+    "plain": "- Apache 2.0\n",
+    "childs": {
+      "0": [
+        [
+          {
+            "content": "Apache 2.0",
+            "plain": "Apache 2.0\n",
+            "plainChilds": "",
+            "childs": []
+          }
+        ]
+      ]
+    }
+  },
+  "Showcase 2.0": {
+    "plain": "- red 2\n- green\n",
+    "childs": {
+      "0": [
+        [
+          {
+            "content": "red 2",
+            "plain": "red 2\n",
+            "plainChilds": "",
+            "childs": []
+          },
+          {
+            "content": "green",
+            "plain": "green\n",
+            "plainChilds": "",
+            "childs": []
+          }
+        ]
+      ]
+    }
+  },
+  "Description": {
+    "plain": "Default long description in __markdown__.",
+    "childs": {
+      "0": [
+        "Default long description in __markdown__."
+      ]
+    }
+  },
+  "Uncolored": {
+    "plain": "- color 1\n- color 3\n",
+    "childs": {
+      "0": [
+        [
+          {
+            "content": "color 1",
+            "plain": "color 1\n",
+            "plainChilds": "",
+            "childs": []
+          },
+          {
+            "content": "color 3",
+            "plain": "color 3\n",
+            "plainChilds": "",
+            "childs": []
+          }
+        ]
+      ]
+    }
+  },
+  "Repo": {
+    "plain": "- https://github.com/ultimate-comparisons/ultimate-deployment-tool-comparison\n",
+    "childs": {
+      "0": [
+        [
+          {
+            "content": "https://github.com/ultimate-comparisons/ultimate-deployment-tool-comparison",
+            "plain": "https://github.com/ultimate-comparisons/ultimate-deployment-tool-comparison\n",
+            "plainChilds": "",
+            "childs": []
+          }
+        ]
+      ]
+    }
+  },
+  "NumberColumn": {
+    "plain": "- 300\u0000",
+    "childs": {
+      "0": [
+        [
+          {
+            "content": "300",
+            "plain": "300\u0000",
+            "plainChilds": "",
+            "childs": []
+          }
+        ]
+      ]
+    }
+  }
+}

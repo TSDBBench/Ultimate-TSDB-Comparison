@@ -1,0 +1,114 @@
+{
+  "tag": "Default 3 - http://default-3-entry.example.com",
+  "descr": "fast, MPL 2.0, red 1, red 2, light blue",
+  "Performance": {
+    "plain": "- fast\n",
+    "childs": {
+      "0": [
+        [
+          {
+            "content": "fast",
+            "plain": "fast\n",
+            "plainChilds": "",
+            "childs": []
+          }
+        ]
+      ]
+    }
+  },
+  "License": {
+    "plain": "- MPL 2.0\n",
+    "childs": {
+      "0": [
+        [
+          {
+            "content": "MPL 2.0",
+            "plain": "MPL 2.0\n",
+            "plainChilds": "",
+            "childs": []
+          }
+        ]
+      ]
+    }
+  },
+  "Showcase 2.0": {
+    "plain": "- red 1\n- red 2\n- light blue\n",
+    "childs": {
+      "0": [
+        [
+          {
+            "content": "red 1",
+            "plain": "red 1\n",
+            "plainChilds": "",
+            "childs": []
+          },
+          {
+            "content": "red 2",
+            "plain": "red 2\n",
+            "plainChilds": "",
+            "childs": []
+          },
+          {
+            "content": "light blue",
+            "plain": "light blue\n",
+            "plainChilds": "",
+            "childs": []
+          }
+        ]
+      ]
+    }
+  },
+  "Description": {
+    "plain": "Default long description in __markdown__.",
+    "childs": {
+      "0": [
+        "Default long description in __markdown__."
+      ]
+    }
+  },
+  "Uncolored": {
+    "plain": "- color 2\n",
+    "childs": {
+      "0": [
+        [
+          {
+            "content": "color 2",
+            "plain": "color 2\n",
+            "plainChilds": "",
+            "childs": []
+          }
+        ]
+      ]
+    }
+  },
+  "Repo": {
+    "plain": "- https://github.com/ultimate-comparisons/ultimate-IoT-platform-comparison\n",
+    "childs": {
+      "0": [
+        [
+          {
+            "content": "https://github.com/ultimate-comparisons/ultimate-IoT-platform-comparison",
+            "plain": "https://github.com/ultimate-comparisons/ultimate-IoT-platform-comparison\n",
+            "plainChilds": "",
+            "childs": []
+          }
+        ]
+      ]
+    }
+  },
+  "NumberColumn": {
+    "plain": "- 250\u0000",
+    "childs": {
+      "0": [
+        [
+          {
+            "content": "250",
+            "plain": "250\u0000",
+            "plainChilds": "",
+            "childs": []
+          }
+        ]
+      ]
+    }
+  }
+}

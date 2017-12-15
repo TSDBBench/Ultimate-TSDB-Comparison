@@ -1,0 +1,114 @@
+{
+  "tag": "Default 4 - http://default-4-entry.example.com",
+  "descr": "slow, MIT, green, green, grey",
+  "Performance": {
+    "plain": "- slow\n",
+    "childs": {
+      "0": [
+        [
+          {
+            "content": "slow",
+            "plain": "slow\n",
+            "plainChilds": "",
+            "childs": []
+          }
+        ]
+      ]
+    }
+  },
+  "License": {
+    "plain": "- MIT\n",
+    "childs": {
+      "0": [
+        [
+          {
+            "content": "MIT",
+            "plain": "MIT\n",
+            "plainChilds": "",
+            "childs": []
+          }
+        ]
+      ]
+    }
+  },
+  "Showcase 2.0": {
+    "plain": "- green\n- green\n- grey\n",
+    "childs": {
+      "0": [
+        [
+          {
+            "content": "green",
+            "plain": "green\n",
+            "plainChilds": "",
+            "childs": []
+          },
+          {
+            "content": "green",
+            "plain": "green\n",
+            "plainChilds": "",
+            "childs": []
+          },
+          {
+            "content": "grey",
+            "plain": "grey\n",
+            "plainChilds": "",
+            "childs": []
+          }
+        ]
+      ]
+    }
+  },
+  "Description": {
+    "plain": "Default long description in __markdown__.",
+    "childs": {
+      "0": [
+        "Default long description in __markdown__."
+      ]
+    }
+  },
+  "Uncolored": {
+    "plain": "- color 1\n",
+    "childs": {
+      "0": [
+        [
+          {
+            "content": "color 1",
+            "plain": "color 1\n",
+            "plainChilds": "",
+            "childs": []
+          }
+        ]
+      ]
+    }
+  },
+  "Repo": {
+    "plain": "- https://github.com/SitOPT/SitOPT-Installation-Script\n",
+    "childs": {
+      "0": [
+        [
+          {
+            "content": "https://github.com/SitOPT/SitOPT-Installation-Script",
+            "plain": "https://github.com/SitOPT/SitOPT-Installation-Script\n",
+            "plainChilds": "",
+            "childs": []
+          }
+        ]
+      ]
+    }
+  },
+  "NumberColumn": {
+    "plain": "- 100\u0000",
+    "childs": {
+      "0": [
+        [
+          {
+            "content": "100",
+            "plain": "100\u0000",
+            "plainChilds": "",
+            "childs": []
+          }
+        ]
+      ]
+    }
+  }
+}

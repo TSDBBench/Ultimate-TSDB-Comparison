@@ -1,220 +1,134 @@
-#!/usr/bin/env bash
-set -o errexit #abort if any command fails
-me=$(basename "$0")
+#! /bin/bash
 
-help_message="\
-Usage: $me [-c FILE] [<options>]
-Deploy generated files to a git branch.
+# build a branch different from master
+build_branch () {
+  BRANCH=$1
 
-Options:
+  if [[ ! -d prs ]]; then
+    mkdir prs
+  fi
 
-  -h, --help               Show this help information.
-  -v, --verbose            Increase verbosity. Useful for debugging.
-  -e, --allow-empty        Allow deployment of an empty directory.
-  -m, --message MESSAGE    Specify the message used when committing on the
-                           deploy branch.
-  -n, --no-hash            Don't append the source commit's hash to the deploy
-                           commit's message.
-  -c, --config-file PATH   Override default & environment variables' values
-                           with those in set in the file at 'PATH'. Must be the
-                           first option specified.
+  mkdir prs/${BRANCH}
 
-Variables:
+# copy build result to final directory
+  cp -r www/* prs/${BRANCH}
+  git add prs
 
-  GIT_DEPLOY_DIR      Folder path containing the files to deploy.
-  GIT_DEPLOY_BRANCH   Commit deployable files to this branch.
-  GIT_DEPLOY_REPO     Push the deploy branch to this repository.
+# add prs/${BRANCH} to gh-pages
+  git commit -m "Travis commit for ${BRANCH}"
+  git checkout -b ${BRANCH}
+  git checkout -f gh-pages
+  git checkout -f ${BRANCH} prs/${BRANCH}
+  git add prs
 
-These variables have default values defined in the script. The defaults can be
-overridden by environment variables. Any environment variables are overridden
-by values set in a '.env' file (if it exists), and in turn by those set in a
-file specified by the '--config-file' option."
+# add index.md
+  echo "Create index.md"
+  echo '<a href="https://github.com/ultimate-comparisons/ultimate-comparison-BASE"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/567c3a48d796e2fc06ea80409cc9dd82bf714434/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png"></a>' > index.md
+  tail -n +2 README.md >> index.md
 
-parse_args() {
-	# Set args from a local environment file.
-	if [ -e ".env" ]; then
-		source .env
-	fi
+# add docs to index.md
+  echo "Create Docs Section"
+  echo "# Docs" >> index.md
+  echo "- [Travis_Build_Deploy](docs/Travis_Build_Deploy.md)" >> index.md
+  echo "- [Update_YOUR_Comparison.md](docs/Update_YOUR_Comparison.md)" >> index.md
+  echo "- [ADR Index](docs/adr)" >> index.md
 
-	# Set args from file specified on the command-line.
-	if [[ $1 = "-c" || $1 = "--config-file" ]]; then
-		source "$2"
-		shift 2
-	fi
+# insert linebreak in index.md
+  echo "" >> index.md
 
-	# Parse arg flags
-	# If something is exposed as an environment variable, set/overwrite it
-	# here. Otherwise, set/overwrite the internal variable instead.
-	while : ; do
-		if [[ $1 = "-h" || $1 = "--help" ]]; then
-			echo "$help_message"
-			return 0
-		elif [[ $1 = "-v" || $1 = "--verbose" ]]; then
-			verbose=true
-			shift
-		elif [[ $1 = "-e" || $1 = "--allow-empty" ]]; then
-			allow_empty=true
-			shift
-		elif [[ ( $1 = "-m" || $1 = "--message" ) && -n $2 ]]; then
-			commit_message=$2
-			shift 2
-		elif [[ $1 = "-n" || $1 = "--no-hash" ]]; then
-			GIT_DEPLOY_APPEND_HASH=false
-			shift
-		else
-			break
-		fi
-	done
+# add PRs to index.md
+  echo "Create PRs Section"
+  git checkout -f gh-pages prs
+  echo "# PRs" >> index.md
+  find prs -mindepth 1 -maxdepth 1 -type d -exec bash -c 'f=$(basename $1 .ts);d=$(dirname $1);echo "- [${f}](${d}/${f})"' bash {} >> index.md \;
 
-	# Set internal option vars from the environment and arg flags. All internal
-	# vars should be declared here, with sane defaults if applicable.
+# add link to current demo to index.md
+  echo "Create link to demo"
+  echo "" >> index.md
+  echo "# Current Master" >> index.md
+  echo "- [Demo](https://ultimate-comparisons.github.io/ultimate-comparison-BASE/demo/)" >> index.md
 
-	# Source directory & target branch.
-	deploy_directory=${GIT_DEPLOY_DIR:-dist}
-	deploy_branch=${GIT_DEPLOY_BRANCH:-gh-pages}
-
-	#if no user identity is already set in the current git environment, use this:
-	default_username=${GIT_DEPLOY_USERNAME:-deploy.sh}
-	default_email=${GIT_DEPLOY_EMAIL:-}
-
-	#repository to deploy to. must be readable and writable.
-	repo=${GIT_DEPLOY_REPO:-origin}
-
-	#append commit hash to the end of message by default
-	append_hash=${GIT_DEPLOY_APPEND_HASH:-true}
+# add index.md to gh-pages
+  git add index.md
+  git commit -m "Travis commit for prs"
+  git push SSH gh-pages
+  git commit -m "Travis commit for ${BRANCH}"
+  git push SSH gh-pages
 }
 
-main() {
-	parse_args "$@"
+# build master
+build_master () {  
+# add docs to gh-pages
+  git checkout -f gh-pages
+  git checkout -f master docs
+  git add docs
+  git commit -m "Travis commit for docs on master"
+  git checkout -f master
 
-	enable_expanded_output
+  if [[ ! -d demo ]]; then
+    mkdir demo
+  fi
 
-	if ! git diff --exit-code --quiet --cached; then
-		echo Aborting due to uncommitted changes in the index >&2
-		return 1
-	fi
+  cp -r www/* demo
 
-	commit_title=`git log -n 1 --format="%s" HEAD`
-	commit_hash=` git log -n 1 --format="%H" HEAD`
-	
-	#default commit message uses last title if a custom one is not supplied
-	if [[ -z $commit_message ]]; then
-		commit_message="publish: $commit_title"
-	fi
-	
-	#append hash to commit message unless no hash flag was found
-	if [ $append_hash = true ]; then
-		commit_message="$commit_message"$'\n\n'"generated from commit $commit_hash"
-	fi
-		
-	previous_branch=`git rev-parse --abbrev-ref HEAD`
+# add demo to gh-pages
+  git add demo
+  git commit -m "Travis commit for master"
+  git checkout -f gh-pages
+  git pull SSH
+  git checkout -f master demo
+  git add demo
+  git commit -m "Travis commit for demo on master"
+  git push SSH gh-pages
+  git pull
 
-	if [ ! -d "$deploy_directory" ]; then
-		echo "Deploy directory '$deploy_directory' does not exist. Aborting." >&2
-		return 1
-	fi
-	
-	# must use short form of flag in ls for compatibility with OS X and BSD
-	if [[ -z `ls -A "$deploy_directory" 2> /dev/null` && -z $allow_empty ]]; then
-		echo "Deploy directory '$deploy_directory' is empty. Aborting. If you're sure you want to deploy an empty tree, use the --allow-empty / -e flag." >&2
-		return 1
-	fi
+  git checkout -f master README.md
 
-	if git ls-remote --exit-code $repo "refs/heads/$deploy_branch" ; then
-		# deploy_branch exists in $repo; make sure we have the latest version
-		
-		disable_expanded_output
-		git fetch --force $repo $deploy_branch:$deploy_branch
-		enable_expanded_output
-	fi
+# add index.md
+  echo "Create index.md"
+  echo '<a href="https://github.com/ultimate-comparisons/ultimate-comparison-BASE"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/567c3a48d796e2fc06ea80409cc9dd82bf714434/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png"></a>' > index.md
+  tail -n +2 README.md >> index.md
 
-	# check if deploy_branch exists locally
-	if git show-ref --verify --quiet "refs/heads/$deploy_branch"
-	then incremental_deploy
-	else initial_deploy
-	fi
+# add docs to index.md
+  echo "Create Docs Section"
+  echo "# Docs" >> index.md
+  echo "- [Travis_Build_Deploy](docs/Travis_Build_Deploy.md)" >> index.md
+  echo "- [Update_YOUR_Comparison.md](docs/Update_YOUR_Comparison.md)" >> index.md
+  echo "- [ADR Index](docs/adr)" >> index.md
 
-	restore_head
+# insert linebreak in index.md
+  echo "" >> index.md
+
+# add PRs to index.md
+  echo "Create PRs Section"
+  git checkout -f gh-pages prs
+  echo "# PRs" >> index.md
+  find prs -mindepth 1 -maxdepth 1 -type d -exec bash -c 'f=$(basename $1 .ts);d=$(dirname $1);echo "- [${f}](${d}/${f})"' bash {} >> index.md \;
+
+# add link to current demo to index.md
+  echo "Create link to demo"
+  echo "" >> index.md
+  echo "# Current Master" >> index.md
+  echo "- [Demo](https://ultimate-comparisons.github.io/ultimate-comparison-BASE/demo/)" >> index.md
+
+# add index.md to gh-pages
+  echo "Push index.md"
+  git add index.md
+  git commit -m "Travis commit for prs"
+  git push SSH gh-pages
 }
 
-initial_deploy() {
-	git --work-tree "$deploy_directory" checkout --orphan $deploy_branch
-	git --work-tree "$deploy_directory" add --all
-	commit+push
-}
-
-incremental_deploy() {
-	#make deploy_branch the current branch
-	git symbolic-ref HEAD refs/heads/$deploy_branch
-	#put the previously committed contents of deploy_branch into the index
-	git --work-tree "$deploy_directory" reset --mixed --quiet
-	git --work-tree "$deploy_directory" add --all
-
-	set +o errexit
-	diff=$(git --work-tree "$deploy_directory" diff --exit-code --quiet HEAD --)$?
-	set -o errexit
-	case $diff in
-		0) echo No changes to files in $deploy_directory. Skipping commit.;;
-		1) commit+push;;
-		*)
-			echo git diff exited with code $diff. Aborting. Staying on branch $deploy_branch so you can debug. To switch back to master, use: git symbolic-ref HEAD refs/heads/master && git reset --mixed >&2
-			return $diff
-			;;
-	esac
-}
-
-commit+push() {
-	set_user_id
-	git --work-tree "$deploy_directory" commit -m "$commit_message"
-
-	disable_expanded_output
-	#--quiet is important here to avoid outputting the repo URL, which may contain a secret token
-	git push --quiet $repo $deploy_branch
-	enable_expanded_output
-}
-
-#echo expanded commands as they are executed (for debugging)
-enable_expanded_output() {
-	if [ $verbose ]; then
-		set -o xtrace
-		set +o verbose
-	fi
-}
-
-#this is used to avoid outputting the repo URL, which may contain a secret token
-disable_expanded_output() {
-	if [ $verbose ]; then
-		set +o xtrace
-		set -o verbose
-	fi
-}
-
-set_user_id() {
-	if [[ -z `git config user.name` ]]; then
-		git config user.name "$default_username"
-	fi
-	if [[ -z `git config user.email` ]]; then
-		git config user.email "$default_email"
-	fi
-}
-
-restore_head() {
-	if [[ $previous_branch = "HEAD" ]]; then
-		#we weren't on any branch before, so just set HEAD back to the commit it was on
-		git update-ref --no-deref HEAD $commit_hash $deploy_branch
-	else
-		git symbolic-ref HEAD refs/heads/$previous_branch
-	fi
-	
-	git reset --mixed
-}
-
-filter() {
-	sed -e "s|$repo|\$repo|g"
-}
-
-sanitize() {
-	"$@" 2> >(filter 1>&2) | filter
-}
-
-[[ $1 = --source-only ]] || main "$@"
+git remote add SSH git@github.com:ultimate-comparisons/ultimate-comparison-BASE.git
+git fetch --all
+# decide which functions should be called
+if [[ ${TRAVIS_PULL_REQUEST} != false ]]; then
+  CURRENT_BRANCH=${TRAVIS_PULL_REQUEST_BRANCH}
+  build_branch ${TRAVIS_PULL_REQUEST_BRANCH}
+else
+  if [[ ${TRAVIS_BRANCH} != "master" ]]; then
+    echo "or not..."
+    exit 0;
+  fi
+  CURRENT_BRANCH="master"
+  build_master
+fi

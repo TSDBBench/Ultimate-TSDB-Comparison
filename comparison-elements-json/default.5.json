@@ -1,0 +1,60 @@
+{
+  "tag": "Default 5 - http://default-5-entry.example.com",
+  "descr": "almost everything unknown",
+  "Performance": {
+    "plain": "",
+    "childs": {
+      "0": [
+        ""
+      ]
+    }
+  },
+  "License": {
+    "plain": "",
+    "childs": {
+      "0": [
+        ""
+      ]
+    }
+  },
+  "Showcase 2.0": {
+    "plain": "",
+    "childs": {
+      "0": [
+        ""
+      ]
+    }
+  },
+  "Description": {
+    "plain": "This element has almost no values to test unknown",
+    "childs": {
+      "0": [
+        "This element has almost no values to test unknown"
+      ]
+    }
+  },
+  "Uncolored": {
+    "plain": "",
+    "childs": {
+      "0": [
+        ""
+      ]
+    }
+  },
+  "Repo": {
+    "plain": "",
+    "childs": {
+      "0": [
+        ""
+      ]
+    }
+  },
+  "NumberColumn": {
+    "plain": "",
+    "childs": {
+      "0": [
+        ""
+      ]
+    }
+  }
+}

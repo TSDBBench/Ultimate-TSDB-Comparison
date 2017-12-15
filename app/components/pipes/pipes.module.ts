@@ -5,6 +5,7 @@ import { TablePipe } from "./table-pipe/table.pipe";
 import { OrderByPipe } from "./orderby-pipe/orderby.pipe";
 import { CitationPipe } from "./citation-pipe/citation.pipe";
 import { SanitizerPipe } from "./sanitizer-pipe/sanitizer.pipe";
+import { AttributePipe } from "./attribute-pipe/attribute.pipe";
 
 @NgModule({
     imports: [
@@ -15,21 +16,24 @@ import { SanitizerPipe } from "./sanitizer-pipe/sanitizer.pipe";
         TablePipe,
         OrderByPipe,
         CitationPipe,
-        SanitizerPipe
+        SanitizerPipe,
+        AttributePipe
     ],
     declarations: [
         DataPipe,
         TablePipe,
         OrderByPipe,
         CitationPipe,
-        SanitizerPipe
+        SanitizerPipe,
+        AttributePipe
     ],
     providers: [
         DataPipe,
         TablePipe,
         OrderByPipe,
         CitationPipe,
-        SanitizerPipe
+        SanitizerPipe,
+        AttributePipe
     ]
 })
 export class PipesModule {
