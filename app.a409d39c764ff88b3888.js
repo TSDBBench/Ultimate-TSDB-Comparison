@@ -1003,7 +1003,7 @@ webpackJsonp([0],[
 /* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	var __WEBPACK_AMD_DEFINE_RESULT__;;/*! showdown v 1.8.5 - 10-12-2017 */
+	var __WEBPACK_AMD_DEFINE_RESULT__;;/*! showdown v 1.8.6 - 22-12-2017 */
 	(function(){
 	/**
 	 * Created by Tivie on 13-07-2015.
@@ -1167,6 +1167,11 @@ webpackJsonp([0],[
 	      defaultValue: false,
 	      description: 'Enable support for document metadata (defined at the top of the document between `«««` and `»»»` or between `---` and `---`).',
 	      type: 'boolean'
+	    },
+	    splitAdjacentBlockquotes: {
+	      defaultValue: false,
+	      description: 'Split adjacent blockquote blocks',
+	      type: 'boolean'
 	    }
 	  };
 	  if (simple === false) {
@@ -1220,7 +1225,8 @@ webpackJsonp([0],[
 	        ghCompatibleHeaderId:                 true,
 	        ghMentions:                           true,
 	        backslashEscapesHTMLTags:             true,
-	        emoji:                                true
+	        emoji:                                true,
+	        splitAdjacentBlockquotes:             true
 	      },
 	      original: {
 	        noHeaderId:                           true,
@@ -3851,12 +3857,19 @@ webpackJsonp([0],[
 	
 	  text = globals.converter._dispatch('blockQuotes.before', text, options, globals);
 	
-	  text = text.replace(/((^ {0,3}>[ \t]?.+\n(.+\n)*\n*)+)/gm, function (wholeMatch, m1) {
-	    var bq = m1;
+	  // add a couple extra lines after the text and endtext mark
+	  text = text + '\n\n';
 	
+	  var rgx = /(^ {0,3}>[ \t]?.+\n(.+\n)*\n*)+/gm;
+	
+	  if (options.splitAdjacentBlockquotes) {
+	    rgx = /^ {0,3}>[\s\S]*?(?:\n\n)/gm;
+	  }
+	
+	  text = text.replace(rgx, function (bq) {
 	    // attacklab: hack around Konqueror 3.5.4 bug:
 	    // "----------bug".replace(/^-/g,"") == "bug"
-	    bq = bq.replace(/^[ \t]*>[ \t]?/gm, '¨0'); // trim one level of quoting
+	    bq = bq.replace(/^[ \t]*>[ \t]?/gm, ''); // trim one level of quoting
 	
 	    // attacklab: clean up hack
 	    bq = bq.replace(/¨0/g, '');
@@ -5867,9 +5880,9 @@ webpackJsonp([0],[
 	"use strict";
 	class VersionInformation {
 	    constructor() {
-	        this.date = "2017-12-15";
-	        this.commit = "a66f31f23d6d9768a146ff6bdf6e65ae6515a611";
-	        this.link = "https://github.com/ultimate-comparisons/ultimate-comparison-BASE/commit/a66f31f23d6d9768a146ff6bdf6e65ae6515a611";
+	        this.date = "2018-03-06";
+	        this.commit = "77a9283174d8d6e9ccc1da99c7b0196e81e7d695";
+	        this.link = "https://github.com/ultimate-comparisons/ultimate-comparison-BASE/commit/77a9283174d8d6e9ccc1da99c7b0196e81e7d695";
 	    }
 	}
 	exports.VersionInformation = VersionInformation;
@@ -14904,4 +14917,4 @@ webpackJsonp([0],[
 
 /***/ })
 ]);
-//# sourceMappingURL=app.89ed519b3160d20dda50.js.map
+//# sourceMappingURL=app.a409d39c764ff88b3888.js.map

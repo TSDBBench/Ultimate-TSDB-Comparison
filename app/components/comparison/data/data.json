@@ -299,10 +299,16 @@
       }
     },
     "Advanced Functions": {
-      "plain": "- Tags\n- Long-term Storage\n",
+      "plain": "- Continuous Calculation\n- Tags\n- Long-term Storage\n",
       "childs": {
         "0": [
           [
+            {
+              "content": "Continuous Calculation",
+              "plain": "Continuous Calculation\n",
+              "plainChilds": "",
+              "childs": []
+            },
             {
               "content": "Tags",
               "plain": "Tags\n",
@@ -380,31 +386,43 @@
       }
     },
     "APIs/Interfaces": {
-      "plain": "- ActiveMQ\n- Alteryx Designer\n- Chartlab\n- collectd\n- Graphite \n- IBM Tivoli Monitoring\n- MatLab\n- scollector\n- stata\n- statsD\n- Tableau\n- tcollector\n",
+      "plain": "- HTTP\n- JDBC\n- REST\n- JSON\n- OpenTSDB\n- Collectd\n- Graphite \n- scollector\n- statsD\n- tcollector\n- Kafka\n- UDP\n- TelNet\n",
       "childs": {
         "0": [
           [
             {
-              "content": "ActiveMQ",
-              "plain": "ActiveMQ\n",
+              "content": "HTTP",
+              "plain": "HTTP\n",
               "plainChilds": "",
               "childs": []
             },
             {
-              "content": "Alteryx Designer",
-              "plain": "Alteryx Designer\n",
+              "content": "JDBC",
+              "plain": "JDBC\n",
               "plainChilds": "",
               "childs": []
             },
             {
-              "content": "Chartlab",
-              "plain": "Chartlab\n",
+              "content": "REST",
+              "plain": "REST\n",
               "plainChilds": "",
               "childs": []
             },
             {
-              "content": "collectd",
-              "plain": "collectd\n",
+              "content": "JSON",
+              "plain": "JSON\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "OpenTSDB",
+              "plain": "OpenTSDB\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "Collectd",
+              "plain": "Collectd\n",
               "plainChilds": "",
               "childs": []
             },
@@ -415,26 +433,8 @@
               "childs": []
             },
             {
-              "content": "IBM Tivoli Monitoring",
-              "plain": "IBM Tivoli Monitoring\n",
-              "plainChilds": "",
-              "childs": []
-            },
-            {
-              "content": "MatLab",
-              "plain": "MatLab\n",
-              "plainChilds": "",
-              "childs": []
-            },
-            {
               "content": "scollector",
               "plain": "scollector\n",
-              "plainChilds": "",
-              "childs": []
-            },
-            {
-              "content": "stata",
-              "plain": "stata\n",
               "plainChilds": "",
               "childs": []
             },
@@ -445,14 +445,26 @@
               "childs": []
             },
             {
-              "content": "Tableau",
-              "plain": "Tableau\n",
+              "content": "tcollector",
+              "plain": "tcollector\n",
               "plainChilds": "",
               "childs": []
             },
             {
-              "content": "tcollector",
-              "plain": "tcollector\n",
+              "content": "Kafka",
+              "plain": "Kafka\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "UDP",
+              "plain": "UDP\n",
+              "plainChilds": "",
+              "childs": []
+            },
+            {
+              "content": "TelNet",
+              "plain": "TelNet\n",
               "plainChilds": "",
               "childs": []
             }
