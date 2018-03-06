@@ -18,6 +18,7 @@
 - DEL
 
 ## Advanced Functions
+- Continuous Calculation
 - Tags
 - Long-term Storage
 
@@ -34,18 +35,20 @@
 - 1 ms
 
 ## APIs/Interfaces
-- ActiveMQ
-- Alteryx Designer
-- Chartlab
-- collectd
+
+- HTTP
+- JDBC
+- REST
+- JSON
+- OpenTSDB
+- Collectd
 - Graphite 
-- IBM Tivoli Monitoring
-- MatLab
 - scollector
-- stata
 - statsD
-- Tableau
 - tcollector
+- Kafka
+- UDP
+- TelNet
 
 ## Client Libraries
 - Java
