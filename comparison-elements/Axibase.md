@@ -19,6 +19,7 @@
 
 ## Advanced Functions
 - Continuous Calculation
+  - In ATSD continuous calculations are implemented in the rule engine using [derived metrics](https://github.com/axibase/atsd/blob/master/rule-engine/derived.md) feature. The rule engine creates sliding data windows in memory and produces new calculated metrics as the underlying metrics arrive. The calculated metrics can be produced with arithmetic formulas, statistical functions, db lookup functions and can join multiple underlying metrics. The frequency of new calculated metrics can be the same as underlying metrics or smaller.
 - Tags
 - Long-term Storage
 
