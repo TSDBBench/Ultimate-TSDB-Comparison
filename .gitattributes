@@ -1,3 +1,0 @@
-*.sh eol=lf
-gradlew eol=lf
-gradle/wrapper/gradle-wrapper.propeties eol=lf
