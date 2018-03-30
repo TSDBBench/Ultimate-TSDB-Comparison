@@ -1,0 +1,57 @@
+########################################################################################################################
+#
+# This files is used as an default template for an Ultimate-Comparison (UC) configuration
+# and utilised by the npm start task (for autoCriteria)
+#
+########################################################################################################################
+
+title: Ultimate-X-Comparison
+subtitle: Ultimate X comparison framework
+selectTitle: Criteria
+tableTitle: Comparison of ...
+repository:
+
+details:
+  header:
+    nameRef: id
+    labelRef:
+    urlRef: inline
+  body:
+    title: Description
+    bodyRef: Description
+
+citation:
+  csl: acm-siggraph.csl
+  bib: literature.bib
+
+criteria:
+  - Example:
+      name: Example
+      search: true
+      table: true
+      detail: true
+      type: label
+
+autoCriteria:
+  # Do not copy to criteria from here! This is not in the required omap (ordered map) form of criteria
+  id:
+    name: Name
+    search: false
+    table: true
+    detail: false
+  description:
+    name: Short Description
+    search: false
+    detail: false
+    type: text
+  defaultLabel:
+    search: true
+    table: true
+    detail: true
+    type: label
+    values:
+  defaultMarkdown:
+    search: false
+    table: true
+    detail: true
+    type: markdown

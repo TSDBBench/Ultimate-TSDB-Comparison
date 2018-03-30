@@ -1,0 +1,284 @@
+########################################################################################################################
+#
+# This files is used as an example for an Ultimate-Comparison (UC) configuration
+# and is not imported or utilised by the UC
+#
+########################################################################################################################
+
+title: Ultimate-Comparison                                  # default: Ultimate-X-Comparison
+subtitle: Ultimate comparison framework                     # default: Ultimate X comparison framework
+
+selectTitle: Criteria                                       # default: Criteria
+tableTitle: Comparison of Examples                          # default: Comparison of ...
+
+repository: >-                                              # default: none
+  https://github.com/ultimate-comparisons/
+  ultimate-comparison-BASE.git
+
+details:
+  header:
+    nameRef: id                                             # default: id
+    labelRef: Performance                                   # default: none
+    urlRef: inline                                          # default: inline (Example # 'id' - 'url' <= Entry 1 - http://entry-1.example.com)
+  body:
+    title: Description                                      # default: Description
+    bodyRef: Description                                    # default: Description
+
+citation:
+  csl: acm-siggraph.csl
+  bib: literature.bib
+
+# Criteria is a 'omap (=ordered map)' specifying the comparison criteria
+# => List items are important
+# => Order of the list item represents the column order in the table
+criteria:
+  # id references the first level header of a markdown file
+  # (With type=url) e.g. '# Default 1 - www.example.com' => id = 'Default 1' and url => 'http://www.example.com'
+  # (With type=text) e.g. '# Default 1 - www.example.com' => id ='Default 1 - www.example.com'
+  - id:
+      name: Name                                            # default: 'id'
+      search: false                                         # default true
+      table: true                                           # default true
+      detail: false                                         # default true
+  # description references the text after the first level header
+  # (With type=text) e.g. '# Default 1 - www.example.com\nThis is the long description for ...'
+  #   => description: 'This is the long description for ...'
+  - description:
+      name: Short Description
+      search: false
+      detail: false
+      type: text
+  # Rating references the second level header 'Rating'
+  # (With type=rating) e.g. '## Rating\n - [1] Comment 1\n - [3] Comment 2'
+  #   => Column value for Rating (average): 2 stars
+  #   => Details Rating section: '- 1 star Comment 1\n 3 stars Comment 2'
+  - Rating:
+      search: false
+      referencedHeader: Development
+      type: rating
+  # Repository references the second level header 'Repository'
+  # (With type=repository) e.g. 'https://github.com/ultimate-comparisons/ultimate-comparison-BASE'
+  # The npm start task will check the repository url (github repo url required) for the last commit and automatically
+  # adds values for the 'referencedHeader' (in this case 'Development')
+  - Repository:
+      search: false
+      table: false
+      detail: false
+      type: repository
+      values:
+        Active:
+          minAge: -1                                          # default: -1
+          maxAge: 1                                           # default: -1
+          minAgeUnit: months                                  # default: months
+          maxAgeUnit: months                                  # default: 'min-age-unit'
+          class: label-success
+        Inactive:
+          minAge: 6
+          class: label-danger
+        Not Sure:
+          minAge: 1
+          maxAge: 6
+          class: label-warning
+  # Following items represent second level header with different types
+  - Description:
+      table: false
+      search: false
+      detail: false
+      type: markdown
+  - Performance:
+      description: Preformance of entry.      # default: 'key|name' of entry.
+      placeholder: Select performance of ...  # default: Select 'key|name' of ...
+      andSearch: true                         # default: true
+      type: label                             # default: label
+      values:
+        fast:
+          description: Overall performance below 200ms. # default: 'Performance' is 'fast'.
+          class: label-success                          # default: none
+        slow:
+          description: Overall performance above 200ms. # default: 'Performance' is 'slow'.
+          class: label-danger                           # default: none
+  - License:
+      table: false
+      andSearch: false
+      values:
+        Apache-2.0:
+          description: https://spdx.org/licenses/Apache-2.0.html
+        MIT:
+          description: https://spdx.org/licenses/MIT.html
+        MPL-2.0:
+          description: https://spdx.org/licenses/MPL-2.0.html
+  - Showcase 2.0:
+      values:
+        dark blue:
+          description: Showcase for dark blue label
+          class: label-primary
+        green:
+          description: Showcase for green label
+          class: label-success
+        grey:
+          description: Show case for grey label
+          class: label-default
+        light blue:
+          class: label-info
+        red 1:
+          description: Show case for red label 1
+          backgroundColor: "#d9534f"
+          color: "#fff"
+        red 2:
+          description: Show case for red label 2
+          class: label-danger
+        yellow:
+          description: Show case for yellow label
+          class: label-warning
+  - Uncolored:
+      description: Tags that were originally uncolored.
+      values:
+        Color 1:
+          weight: 1   # default: 1
+        Color 2:
+          weight: 2
+        Color 3:
+          weight: 3
+  - NumberColumn:
+      name: Number Column
+      order: ASC
+      placeholder: Select number ranges ...
+      rangeSearch: true   # default: false
+      values:
+        199:
+          description: 199
+          weight: 1.99
+        200:
+          description: 200
+          weight: 3
+        250:
+          description: 250
+          weight: 3
+        300:
+          description: 300
+          weight: 4
+
+# If the user does not specify a class or color for criteria item values the npm start task will automatically
+# generate colors
+autoColor:
+  License:
+    Apache-2.0:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(105, 100%, 70%)'
+    MIT:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(135, 100%, 70%)'
+    MPL-2.0:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(165, 100%, 70%)'
+  Uncolored:
+    Color 1:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(195, 100%, 70%)'
+    Color 2:
+      color: '#ffff00'
+      backgroundColor: 'hsl(225, 100%, 70%)'
+    Color 3:
+      color: '#ffff00'
+      backgroundColor: 'hsl(255, 100%, 70%)'
+  NumberColumn:
+    '199':
+      color: '#ffff00'
+      backgroundColor: 'hsl(285, 100%, 70%)'
+    '200':
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(315, 100%, 70%)'
+    '250':
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(15, 100%, 70%)'
+    '300':
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(45, 100%, 70%)'
+
+# If the user does not specify a criteria configuration for second level header in the markdown files the npm
+# start task will automatically interpret those second level header as type label and generate add the values
+# to autoCriteria
+autoCriteria:
+  NumberColumn:
+    100:
+
+# Converts the bibtex file above automatically to yaml entries
+# => only values are interpreted according to the bibtex style file
+# => bibtex keys are represented with a simple number
+# => bibtex keys in markdown content '[@Adi:2004:ASM:988145.988150]' are converted to links: '<a href='..'>[0]</a>'
+autoBibtex:
+  'Adi:2004:ASM:988145.988150':
+    index: 0
+    value: >-
+      Adi, A. and Etzion, O. 2004. Amit – the Situation Manager. The VLDB
+      Journal 13, 2, 177–203.
+  'Bass:2007:MES:1266894.1266896':
+    index: 1
+    value: >-
+      Bass, T. 2007. Mythbusters: Event Stream Processing Versus Complex Event
+      Processing. Proceedings of the 2007 Inaugural International Conference on
+      Distributed Event-based Systems, ACM, 1–1.
+  Bry07towardsformal:
+    index: 2
+    value: >-
+      Bry, F. 2007. Towards formal foundations of event queries and rules. In
+      Proc. Int. Workshop on Event-Driven Architecture, Processing and Systems.
+  'Chakravarthy:1994:CEA:645920.672994':
+    index: 3
+    value: >-
+      Chakravarthy, S., Krishnaprasad, V., Anwar, E., and Kim, S.-K. 1994.
+      Composite Events for Active Databases: Semantics, Contexts and Detection.
+      Proceedings of the 20th International Conference on Very Large Data Bases,
+      Morgan Kaufmann Publishers Inc., 606–617.
+  'prolog:morgankaufman':
+    index: 4
+    value: >-
+      Covington, M.A., Nute, D., and Vellino, A. 1987. Prolog programming in
+      depth. Morgan Kaufmann Publishers Inc., San Francisco, CA, USA,.
+  'Dayal:1988:ROT:60295.60304':
+    index: 5
+    value: >-
+      Dayal, U., Buchmann, A.P., and McCarthy, D.R. 1988. Rules Are Objects Too:
+      A Knowledge Model for an Active, Object-oriented Databasesystem. Lecture
+      Notes in Computer Science on Advances in Object-oriented Database Systems,
+      Springer-Verlag New York, Inc., 129–143.
+  eckertThesisCEP:
+    index: 6
+    value: >-
+      Eckert, M. 2008. Complex Event Processing with XChange EQ : Language
+      Design, Formal Semantics, and Incremental Evaluation for Querying Events.
+  raey2:
+    index: 7
+    value: >-
+      Eckert, M. and Bry, F. 2009. Complex Event Processing (CEP).
+      Informatik-Spektrum 32, 2, 163–167.
+  Eckert2011:
+    index: 8
+    value: >-
+      Eckert, Michael\nand Bry, François\nand Brodt, Simon\nand Poppe, Olga\nand
+      Hausmann, Steffen. 2011. Reasoning in Event-Based Distributed Systems. In:
+      F. Helmer Sven and Poulovassilis, Alexandra and Xhafa, ed., Springer
+      Berlin Heidelberg, Berlin, Heidelberg, 47–70.
+  esper-reference:
+    index: 9
+    value: >-
+      Esper Team. Esper Reference documentation.
+      http://www.espertech.com/esper/release-5.1.0/esper-reference/pdf/esper_reference.pdf.
+  SurveyCEPaPA:
+    index: 10
+    value: >-
+      Fülöp, L.J., Tóth, G., Rácz, R., et al. 2010. Survey on Complex Event
+      Processing and Predictive Analytics. University of Szeged.
+  Gehani92compositeevent:
+    index: 11
+    value: >-
+      Gehani, N.H. and Jagadish, H.V. 1992. Composite event specification in
+      active databases: Model and implementation. 327–338.
+  reasoningEBDS:
+    index: 12
+    value: >-
+      Helmer, S., Poulovassilis, A., and Xhafa, F. 2011. Reasoning in
+      Event-Based Distributed Systems. Springer.
+  ibmtivoli:
+    index: 13
+    value: IBM. 2016. Tivoli Enterprise Console.

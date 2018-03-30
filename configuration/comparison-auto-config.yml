@@ -1,0 +1,619 @@
+title: Ultimate-TSDB-Comparison
+subtitle: Ultimate Comparison of open source TSDBs
+selectTitle: Criteria
+tableTitle: Comparison of open source TSDBs
+repository: 'https://github.com/TSDBBench/Ultimate-TSDB-Comparison.git'
+details:
+  header:
+    nameRef: id
+    urlRef: inline
+  body:
+    title: Description
+    bodyRef: description
+citation:
+  csl: acm-siggraph.csl
+  bib: literature.bib
+criteria:
+  - id:
+      name: Name
+      search: false
+      table: true
+      detail: false
+  - description:
+      name: Short description
+      search: false
+      detail: false
+      table: false
+      type: markdown
+  - Rating:
+      name: ''
+      search: false
+      table: false
+      type: rating
+  - Clusterability Features:
+      table: true
+      search: true
+      description: The clusterability features supported.
+      placeholder: Select clusterability features...
+      andSearch: false
+      type: label
+      values:
+        High Availability:
+          description: High availability (HA) is supported
+        Scalability:
+          description: Scalability is supported
+        Load Balancing:
+          description: Load balancing is supported
+  - Functions:
+      table: true
+      search: true
+      description: THe query types supported
+      placeholder: Select query types...
+      andSearch: false
+      type: label
+      values:
+        INS:
+          description: Insert (INS) query supported
+        READ:
+          description: Read query supported
+        SCAN:
+          description: Scan query supported
+        AVG:
+          description: Average (AVG) query supported
+        SUM:
+          description: Summarization (SUM) query supported
+        CNT:
+          description: Count (CNT) query supported
+        MAX:
+          description: Maximum (MAX) query supported
+        MIN:
+          description: Minimum (MIN) query supported
+        UPD:
+          description: Update (UPD) query supported
+        DEL:
+          description: Delete (DEL) query supported
+  - Advanced Functions:
+      table: true
+      search: true
+      description: The advanced functions supported.
+      placeholder: Select advanced functions...
+      andSearch: false
+      type: label
+      values:
+        Continuous Calculation:
+          description: Continuous calculations are supported
+        Tags:
+          description: Tags are supported
+        Long-term Storage:
+          description: Long-term storage is supported
+        Matrix Time Series:
+          description: Matrix time series are supported
+  - Sampling:
+      table: true
+      search: true
+      description: The sampling funcitons supported.
+      placeholder: Select sampling functions...
+      andSearch: false
+      type: label
+      values:
+        Downsampling:
+          description: Downsampling is supported
+  - Smallest Sampling Interval:
+      table: true
+      search: true
+      description: The smallest sample interval supported.
+      placeholder: Select smallest sample interval...
+      andSearch: false
+      type: label
+      values:
+        1 ms:
+          description: 1 ms is the smallest sample interval supported
+        2 ms:
+          description: 2 ms is the smallest sample interval supported
+        1 s: {}
+        1 ns: {}
+  - Smallest Storage Granularity:
+      table: false
+      search: true
+      description: The smallest storage granularity supported.
+      placeholder: Select smallest storage granularity...
+      andSearch: false
+      type: label
+      values:
+        1 ms:
+          description: 1 ms is the smallest storage granularity supported
+        1 s: {}
+        1 ns: {}
+  - Smallest Guaranteed Storage Granularity:
+      table: false
+      search: false
+      description: The smallest guaranteed storage granularity.
+      placeholder: Select smallest guaranteed storage granularity...
+      andSearch: false
+      type: label
+      values:
+        1 ms:
+          description: 1 ms is the smallest sample interval supported
+        '>1 ms':
+          description: The smallest sample interval supported is gretaer than 1 ms
+        1 s: {}
+        1 ns: {}
+  - APIs/Interfaces:
+      table: true
+      search: true
+      description: The APIs/interfaces supported.
+      placeholder: Select APIs/interfaces...
+      andSearch: false
+      type: label
+      values:
+        CLI:
+          description: CLI is supported
+        HTTP GUI:
+          description: HTTP GUI is supported
+        Graphite:
+          description: Graphite is supported
+        REST:
+          description: REST is supported
+        HTTP:
+          description: REST is supported
+        JSON:
+          description: JSON is supported
+        Kafka:
+          description: Kafka is supported
+        statsD:
+          description: statsD is supported
+        UDP:
+          description: UDP is supported
+        Telnet:
+          description: Telnet is supported
+        Azure:
+          description: Azure is supported
+        RabbitMQ:
+          description: RabbitMQ is supported
+        S3:
+          description: S3 is supported
+        Spritzer:
+          description: Spritzer is supported
+        Samza:
+          description: Samza is supported
+        Spark:
+          description: Spark is supported
+        Storm:
+          description: Storm is supported
+        Collectd:
+          description: Collectd is supported
+        OpenTSDB:
+          description: OpenTSDB is supported
+  - Client Libraries:
+      table: true
+      search: true
+      description: The client libraries supported.
+      placeholder: Select client libraries...
+      andSearch: false
+      type: label
+      values:
+        Java:
+          description: Java is supported
+        Python:
+          description: Python is supported
+        R:
+          description: R is supported
+        Groovy:
+          description: Groovy is supported
+        .NET:
+          description: .NET is supported
+        Perl:
+          description: Perl is supported
+        PHP:
+          description: PHP is supported
+        Ruby:
+          description: Ruby is supported
+        C:
+          description: C is supported
+        Node.js:
+          description: Node.js is supported
+        ODBC:
+          description: ODBC is supported
+        Go:
+          description: Go is supported
+        J:
+          description: J is supported
+        C++:
+          description: C++ is supported
+        Tcl:
+          description: Tcl is supported
+  - Extensibility:
+      table: false
+      search: true
+      description: The extensibility features supported.
+      placecholder: Select extensibility features...
+      andSearch: false
+      type: label
+      values:
+        Plugins:
+          description: Plugins
+  - License:
+      table: true
+      search: true
+      description: The license supported.
+      placeholder: Select licenses...
+      andSearch: false
+      values:
+        EPL-1.0:
+          description: '[EPL-1.0](https://spdx.org/licenses/EPL-1.0.html)'
+          class: label-blue
+        LGPL-3.0:
+          description: '[LGPL-3.0](https://spdx.org/licenses/LGPL-3.0.html)'
+          class: label-blue
+        LGPL-2.0+:
+          description: '[LGPL-2.0+](https://spdx.org/licenses/LGPL-2.0+.html)'
+          class: label-blue
+        Apache-2.0:
+          description: '[Apache-2.0](https://spdx.org/licenses/Apache-2.0.html)'
+          class: label-blue
+        MIT:
+          description: '[MIT](https://spdx.org/licenses/MIT.html)'
+          class: label-blue
+        MPL-2.0:
+          description: '[MPL-2.0](https://spdx.org/licenses/MPL-2.0.html)'
+          class: label-blue
+        BSD-2-Clause:
+          description: '[BSD-2-Clause](https://spdx.org/licenses/BSD-2-Clause.html)'
+          class: label-blue
+        BSD-3-Clause:
+          description: '[BSD-3-Clause](https://spdx.org/licenses/BSD-3-Clause.html)'
+          class: label-blue
+        MPL-1.1:
+          description: '[MPL-1.1](https://spdx.org/licenses/MPL-1.1.html)'
+          class: label-blue
+        AGPL-3.0:
+          description: '[AGPL-3.0](https://spdx.org/licenses/AGPL-3.0.html)'
+          class: label-blue
+        GPL-3.0-or-later:
+          description: '[GPL-3.0-or-later](https://spdx.org/licenses/GPL-3.0-or-later.html)'
+          class: label-blue
+        MonetDB Public:
+          description: '[MonetDB Public](https://www.monetdb.org/Legal/MonetDBLicense)'
+          class: label-blue
+        GPL-2.0-only:
+          description: '[GPL-2.0-only](https://spdx.org/licenses/GPL-2.0-only.html)'
+          class: label-blue
+        PostgreSQL:
+          description: '[PostgreSQL](https://spdx.org/licenses/PostgreSQL.html)'
+          class: label-blue
+  - Stable Version:
+      table: false
+      search: true
+      description: Stable versions exist and are supported.
+      placeholder: Select support of stable versions...
+      andSearch: false
+      type: label
+      values:
+        'yes':
+          description: A stable version exists and is supported
+  - Commercial Support:
+      table: false
+      search: true
+      description: Commercial support exists.
+      placeholder: Sellect commercial support...
+      andSearch: false
+      type: label
+      values:
+        'yes':
+          description: Commercial support exists.
+autoCriteria:
+  Client Libraries:
+    values:
+      'C#': {}
+      Clojure: {}
+      Erlang: {}
+      Haskell: {}
+      Lua: {}
+      Matlab: {}
+      Pascal: {}
+      Scala: {}
+      Swift: {}
+      Cubism.js: {}
+      Graphitejs: {}
+      Scales: {}
+      Structured Metrics: {}
+      txCarbonClient: {}
+  APIs/Interfaces:
+    values:
+      Grafana: {}
+      JDBC: {}
+      scollector: {}
+      tcollector: {}
+      TelNet: {}
+      Redis: {}
+  License:
+    values:
+      ATSD Community Edition Software License: {}
+  Advanced Functions:
+    values:
+      Contiunous Calculation: {}
+autoColor:
+  Clusterability Features:
+    High Availability:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(180, 100%, 70%)'
+    Load Balancer:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(180, 100%, 70%)'
+    Scalability:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(180, 100%, 70%)'
+    Load Balancing:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(45, 100%, 70%)'
+  Functions:
+    AVG:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(195, 100%, 70%)'
+    CNT:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(195, 100%, 70%)'
+    DEL:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(195, 100%, 70%)'
+    INS:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(195, 100%, 70%)'
+    MAX:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(195, 100%, 70%)'
+    MIN:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(195, 100%, 70%)'
+    READ:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(195, 100%, 70%)'
+    SCAN:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(195, 100%, 70%)'
+    SUM:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(195, 100%, 70%)'
+    UPD:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(195, 100%, 70%)'
+  Advanced Functions:
+    Continuous Calculation:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(210, 100%, 70%)'
+    Long-term Storage:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(210, 100%, 70%)'
+    Matrix Time Series:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(210, 100%, 70%)'
+    Tags:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(210, 100%, 70%)'
+    Contiunous Calculation:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(120, 100%, 70%)'
+  Sampling:
+    Downsampling:
+      color: '#ffff00'
+      backgroundColor: 'hsl(225, 100%, 70%)'
+  Smallest Sampling Interval:
+    1 ms:
+      color: '#ffff00'
+      backgroundColor: 'hsl(240, 100%, 70%)'
+    1 ns:
+      color: '#ffff00'
+      backgroundColor: 'hsl(240, 100%, 70%)'
+    1 s:
+      color: '#ffff00'
+      backgroundColor: 'hsl(240, 100%, 70%)'
+    2 ms:
+      color: '#ffff00'
+      backgroundColor: 'hsl(240, 100%, 70%)'
+  Smallest Storage Granularity:
+    1 ms:
+      color: '#ffff00'
+      backgroundColor: 'hsl(255, 100%, 70%)'
+    1 ns:
+      color: '#ffff00'
+      backgroundColor: 'hsl(255, 100%, 70%)'
+    1 s:
+      color: '#ffff00'
+      backgroundColor: 'hsl(255, 100%, 70%)'
+  Smallest Guaranteed Storage Granularity:
+    '>1 ms':
+      color: '#ffff00'
+      backgroundColor: 'hsl(270, 100%, 70%)'
+    1 ms:
+      color: '#ffff00'
+      backgroundColor: 'hsl(270, 100%, 70%)'
+    1 ns:
+      color: '#ffff00'
+      backgroundColor: 'hsl(270, 100%, 70%)'
+    1 s:
+      color: '#ffff00'
+      backgroundColor: 'hsl(270, 100%, 70%)'
+  APIs/Interfaces:
+    Azure:
+      color: '#ffff00'
+      backgroundColor: 'hsl(285, 100%, 70%)'
+    CLI:
+      color: '#ffff00'
+      backgroundColor: 'hsl(285, 100%, 70%)'
+    Collectd:
+      color: '#ffff00'
+      backgroundColor: 'hsl(285, 100%, 70%)'
+    Graphite:
+      color: '#ffff00'
+      backgroundColor: 'hsl(285, 100%, 70%)'
+    HTTP:
+      color: '#ffff00'
+      backgroundColor: 'hsl(285, 100%, 70%)'
+    HTTP GUI:
+      color: '#ffff00'
+      backgroundColor: 'hsl(285, 100%, 70%)'
+    JSON:
+      color: '#ffff00'
+      backgroundColor: 'hsl(285, 100%, 70%)'
+    Kafka:
+      color: '#ffff00'
+      backgroundColor: 'hsl(285, 100%, 70%)'
+    OpenTSDB:
+      color: '#ffff00'
+      backgroundColor: 'hsl(285, 100%, 70%)'
+    RabbitMQ:
+      color: '#ffff00'
+      backgroundColor: 'hsl(285, 100%, 70%)'
+    REST:
+      color: '#ffff00'
+      backgroundColor: 'hsl(285, 100%, 70%)'
+    S3:
+      color: '#ffff00'
+      backgroundColor: 'hsl(285, 100%, 70%)'
+    Samza:
+      color: '#ffff00'
+      backgroundColor: 'hsl(285, 100%, 70%)'
+    Spark:
+      color: '#ffff00'
+      backgroundColor: 'hsl(285, 100%, 70%)'
+    Spritzer:
+      color: '#ffff00'
+      backgroundColor: 'hsl(285, 100%, 70%)'
+    statsD:
+      color: '#ffff00'
+      backgroundColor: 'hsl(285, 100%, 70%)'
+    Storm:
+      color: '#ffff00'
+      backgroundColor: 'hsl(285, 100%, 70%)'
+    Telnet:
+      color: '#ffff00'
+      backgroundColor: 'hsl(285, 100%, 70%)'
+    UDP:
+      color: '#ffff00'
+      backgroundColor: 'hsl(285, 100%, 70%)'
+    Grafana:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(75, 100%, 70%)'
+    JDBC:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(75, 100%, 70%)'
+    Redis:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(75, 100%, 70%)'
+    scollector:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(75, 100%, 70%)'
+    tcollector:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(75, 100%, 70%)'
+    TelNet:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(75, 100%, 70%)'
+  Client Libraries:
+    .NET:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(300, 100%, 70%)'
+    C:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(300, 100%, 70%)'
+    C++:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(300, 100%, 70%)'
+    Go:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(300, 100%, 70%)'
+    Groovy:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(300, 100%, 70%)'
+    J:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(300, 100%, 70%)'
+    Java:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(300, 100%, 70%)'
+    Node.js:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(300, 100%, 70%)'
+    ODBC:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(300, 100%, 70%)'
+    Perl:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(300, 100%, 70%)'
+    PHP:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(300, 100%, 70%)'
+    Python:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(300, 100%, 70%)'
+    R:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(300, 100%, 70%)'
+    Ruby:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(300, 100%, 70%)'
+    Tcl:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(300, 100%, 70%)'
+    'C#':
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(60, 100%, 70%)'
+    Clojure:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(60, 100%, 70%)'
+    Cubism.js:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(60, 100%, 70%)'
+    Erlang:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(60, 100%, 70%)'
+    Graphitejs:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(60, 100%, 70%)'
+    Haskell:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(60, 100%, 70%)'
+    Lua:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(60, 100%, 70%)'
+    Matlab:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(60, 100%, 70%)'
+    Pascal:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(60, 100%, 70%)'
+    Scala:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(60, 100%, 70%)'
+    Scales:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(60, 100%, 70%)'
+    Structured Metrics:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(60, 100%, 70%)'
+    Swift:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(60, 100%, 70%)'
+    txCarbonClient:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(60, 100%, 70%)'
+  Extensibility:
+    Plugins:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(315, 100%, 70%)'
+  Stable Version:
+    'yes':
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(15, 100%, 70%)'
+  Commercial Support:
+    'yes':
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(30, 100%, 70%)'
+    Commercial Support:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(90, 100%, 70%)'
+  License:
+    ATSD Community Edition Software License:
+      color: '#0d0d0d'
+      backgroundColor: 'hsl(105, 100%, 70%)'
+autoCitation: {}
