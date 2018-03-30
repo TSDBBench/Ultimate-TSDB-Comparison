@@ -25,11 +25,6 @@ criteria:
       detail: false
       table: false
       type: markdown
-  - Rating:
-      name: ''
-      search: false
-      table: false
-      type: rating
   - Clusterability Features:
       table: true
       search: true
