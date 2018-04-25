@@ -108,6 +108,17 @@ The code below shows a sample element.
     ## Commercial Support
     - yes
 
+## Funding
+
+This project received funding from the
+[Federal Ministry for Economic Affairs and Energy](http://www.bmwi.de/Navigation/EN/Home/home.html)
+in the context of the project [NEMAR](https://www.nemar.de/).
+
+[![BMWi](BMWi.jpg)](http://www.bmwi.de/Navigation/EN/Home/home.html)
+
+[![StromNetze](logo-stromnetze.svg)](http://forschung-stromnetze.info/)
+
+[![NEMAR](NEMAR.jpg)](https://www.nemar.de/)
 
 ## License
 
