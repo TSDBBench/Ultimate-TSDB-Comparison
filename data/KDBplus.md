@@ -37,6 +37,7 @@
 - Java
 - Python
 - R
+- Julia
 
 
 ## License
